@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AppsFlyer/Airbridge → Mixpanel Bridge Talk Track</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 980px; margin: 40px auto; padding: 0 20px 60px; line-height: 1.7; color: #172033; background: #fff; }
+    h1 { font-size: 2rem; border-bottom: 3px solid #111827; padding-bottom: 12px; margin-top: 12px; }
+    h2 { margin-top: 42px; padding-top: 12px; color: #111827; border-top: 1px solid #e5e7eb; }
+    h3 { margin-top: 28px; color: #1f2937; }
+    h4 { margin-top: 22px; color: #374151; }
+    a { color: #2563eb; }
+    .meta { color: #6b7280; font-size: 0.92rem; margin-bottom: 20px; }
+    .nav { margin: 0 0 24px; }
+    .badge { display:inline-block; background:#eef2ff; color:#3730a3; padding:4px 10px; border-radius:999px; font-size:0.85rem; margin-right:6px; }
+    blockquote { border-left: 5px solid #4f46e5; background: #f8fafc; margin: 18px 0; padding: 12px 18px; color: #1f2937; }
+    table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid #d1d5db; padding: 9px 10px; vertical-align: top; }
+    th { background: #f3f4f6; }
+    code { background: #f3f4f6; padding: 2px 5px; border-radius: 4px; }
+    pre { background: #111827; color: #f9fafb; padding: 16px; overflow-x: auto; border-radius: 10px; }
+    pre code { background: transparent; padding: 0; color: inherit; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 6px 0; }
+    hr { border:0; border-top:1px solid #e5e7eb; margin:28px 0; }
+    .footer { margin-top: 48px; color: #6b7280; font-size: 0.9rem; border-top: 1px solid #e5e7eb; padding-top: 18px; }
+</style>
+</head>
+<body>
+  <div class="meta">OCEO / Chrong · Sales Intelligence · 2026-05-23</div>
+  <p class="nav"><a href="../index.html">← 홈</a> · <a href="index.html">Sales Intelligence Archive</a></p>
+  <span class="badge">Mixpanel</span><span class="badge">Sales Intelligence</span><span class="badge">v0 Asset</span>
+  <h1>Bridge Talk Track — AppsFlyer/Airbridge → Mixpanel Post-acquisition Behavior Measurement</h1>
+<p>Date: 2026-05-23</p>
+<p>Status: v0 sales talk track candidate</p>
+<p>Backlog item: Post-acquisition behavior measurement</p>
+<p>Primary personas: CMO, Growth Lead, Data/Analytics Manager</p>
+<p>Sources:</p>
+<ul>
+<li>AppsFlyer — Move beyond correlation / Incrementality for UA: <a href="https://www.appsflyer.com/blog/measurement-analytics/incrementality-ua-measurement/">https://www.appsflyer.com/blog/measurement-analytics/incrementality-ua-measurement/</a></li>
+<li>AppsFlyer — Incrementality product page: <a href="https://www.appsflyer.com/products/measurement/incrementality/">https://www.appsflyer.com/products/measurement/incrementality/</a></li>
+<li>Airbridge official/source search signal: attribution + incrementality positioning</li>
+<li>Persona schema: <code>oceo/sales-intelligence/mixpanel-persona-schema-v0.md</code></li>
+</ul>
+<hr />
+<h2>1. Core bridge message</h2>
+<p><strong>AppsFlyer/Airbridge가 “광고가 진짜 incremental growth를 만들었는가”를 보여준다면, Mixpanel은 “그렇게 들어온 고객이 제품 안에서 활성화되고 유지되었는가”를 보여줍니다.</strong></p>
+<p>한 줄로 말하면:</p>
+<blockquote>Attribution과 incrementality는 유입의 질을 검증하고, Mixpanel은 유입 이후 고객 행동의 질을 검증합니다.</blockquote>
+<hr />
+<h2>2. Why this matters</h2>
+<p>AppsFlyer는 최근 메시지에서 attribution만으로는 부족하고, incrementality/causal lift를 통해 “광고가 없었어도 발생했을 전환”과 “광고가 실제로 만든 추가 성과”를 구분해야 한다고 강조한다. 이는 CMO와 Growth Lead에게 매우 강한 메시지다.</p>
+<p>하지만 incrementality가 답하는 질문은 주로 acquisition 관점이다.</p>
+<ul>
+<li>이 캠페인이 incremental conversion을 만들었는가?</li>
+<li>어느 채널/캠페인에 예산을 더 배분해야 하는가?</li>
+<li>attribution과 causal lift가 다르게 말할 때 무엇을 믿어야 하는가?</li>
+</ul>
+<p>Mixpanel이 들어갈 자리는 그 다음이다.</p>
+<ul>
+<li>incremental하게 들어온 고객이 onboarding을 완료했는가?</li>
+<li>첫 핵심 행동까지 얼마나 걸렸는가?</li>
+<li>어떤 캠페인/채널 cohort가 장기 retention과 LTV로 이어지는가?</li>
+<li>UA 효율이 좋아 보여도 product activation에서 새고 있지는 않은가?</li>
+</ul>
+<hr />
+<h2>3. Persona-specific talk tracks</h2>
+<h3>A. CMO / Digital Strategy Executive</h3>
+<blockquote>“AppsFlyer나 Airbridge로 어떤 캠페인이 incremental lift를 만들었는지 보는 건 매우 중요합니다. 다만 CMO 입장에서는 그 다음 질문이 남습니다. 그렇게 데려온 고객이 실제로 제품 안에서 활성화되고, 반복 사용하고, LTV로 이어졌는가입니다. Mixpanel은 이 post-acquisition behavior를 보여줘서 광고 효율과 고객 성장 구조를 연결합니다.”</blockquote>
+<p>CMO hook:</p>
+<ul>
+<li>“ROAS 이후 retention까지 연결해 보셨나요?”</li>
+<li>“광고가 만든 전환이 장기 고객으로 이어지는지 보고 계신가요?”</li>
+<li>“채널별 고객 품질을 activation/retention 기준으로 다시 보면 예산 배분이 달라질 수 있습니다.”</li>
+</ul>
+<h3>B. Growth Lead / UA Lead</h3>
+<blockquote>“AppsFlyer/Airbridge에서 campaign, channel, creative 단위로 성과를 보셨다면, Mixpanel에서는 그 cohort가 제품 안에서 어떤 행동을 하는지 봅니다. 같은 CPI나 CPA라도 onboarding completion, first value action, D7/D30 retention이 다르면 실제 성장 기여도는 완전히 다릅니다.”</blockquote>
+<p>Growth hook:</p>
+<ul>
+<li>“캠페인별 유저가 첫 핵심 행동까지 가는 funnel을 보고 계신가요?”</li>
+<li>“incremental conversion이 높은 캠페인과 retention이 높은 캠페인이 같은가요?”</li>
+<li>“광고 최적화 기준을 install/purchase에서 activation quality로 확장할 수 있습니다.”</li>
+</ul>
+<h3>C. Data / Analytics Manager</h3>
+<blockquote>“MMP는 acquisition source of truth로 두고, Mixpanel은 behavioral source of truth로 두는 구조가 좋습니다. 캠페인 파라미터와 attribution cohort를 Mixpanel 행동 이벤트와 연결하면 acquisition → activation → retention 분석 표준을 만들 수 있습니다.”</blockquote>
+<p>Data hook:</p>
+<ul>
+<li>“MMP campaign data와 product event taxonomy가 연결되어 있나요?”</li>
+<li>“channel/cohort별 funnel·retention을 같은 기준으로 볼 수 있나요?”</li>
+<li>“마케팅팀과 제품팀이 같은 customer journey 지표를 보고 있나요?”</li>
+</ul>
+<hr />
+<h2>4. Discovery flow</h2>
+<h3>Step 1 — Acquisition measurement status</h3>
+<ol>
+<li>AppsFlyer/Airbridge로 어떤 attribution/incrementality 지표를 보고 계신가요?</li>
+<li>캠페인 성과 판단 기준은 install, sign-up, purchase, ROAS 중 어디까지인가요?</li>
+<li>최근 예산 배분에서 가장 논쟁이 큰 채널/캠페인은 무엇인가요?</li>
+</ol>
+<h3>Step 2 — Post-acquisition visibility</h3>
+<ol>
+<li>캠페인별 유입 고객의 onboarding completion을 보고 계신가요?</li>
+<li>캠페인별 first value action, repeat action, D7/D30 retention을 볼 수 있나요?</li>
+<li>incremental lift가 있는 캠페인의 고객이 장기적으로도 좋은 고객인지 확인해 보셨나요?</li>
+</ol>
+<h3>Step 3 — Operating loop</h3>
+<ol>
+<li>UA 성과 리뷰와 product activation 리뷰가 같은 회의/대시보드에서 연결되나요?</li>
+<li>캠페인/채널 cohort를 CRM segment나 onboarding 실험으로 넘기는 프로세스가 있나요?</li>
+<li>좋은 고객을 데려오는 채널의 정의가 “전환”인지 “활성+유지”인지 합의되어 있나요?</li>
+</ol>
+<hr />
+<h2>5. Bridge architecture narrative</h2>
+<pre><code>AppsFlyer / Airbridge
+- channel / campaign / creative
+- attribution / SKAN / MMP
+- incrementality / causal lift
+- acquisition ROI
+        ↓
+Mixpanel
+- onboarding funnel
+- first value action
+- feature adoption
+- cohort retention
+- repeat purchase / subscription behavior
+- LTV proxy behavior
+        ↓
+CRM / Experiment / Budget decision
+- high-quality cohort nurture
+- onboarding experiment
+- budget reallocation
+- lifecycle messaging</code></pre>
+<p>Recommended phrase:</p>
+<blockquote>“MMP에서 유입의 원인과 비용을 보고, Mixpanel에서 유입 이후의 행동 품질을 봅니다. 두 개를 연결해야 acquisition budget이 product growth와 같은 언어로 관리됩니다.”</blockquote>
+<hr />
+<h2>6. Use-case examples</h2>
+<h3>Example 1 — Campaign quality mismatch</h3>
+<p>Attribution 기준으로 A 캠페인이 CPA가 낮고 전환이 많다. 하지만 Mixpanel로 보면 A 캠페인 cohort는 activation completion과 D7 retention이 낮다. 반대로 B 캠페인은 CPA가 높지만 first value action과 repeat behavior가 좋다.</p>
+<p>Sales point:</p>
+<blockquote>“예산 최적화 기준을 CPA에서 activation-adjusted CPA 또는 retention-adjusted campaign quality로 확장할 수 있습니다.”</blockquote>
+<h3>Example 2 — Incremental lift 이후 activation leakage</h3>
+<p>AppsFlyer incrementality 실험에서 특정 UA 캠페인이 incremental conversion을 만든 것으로 확인됐다. 하지만 Mixpanel funnel에서 해당 cohort가 onboarding 2단계에서 크게 이탈한다.</p>
+<p>Sales point:</p>
+<blockquote>“광고는 맞았고, 제품 경험에서 새고 있습니다. 이 경우 예산을 줄이기보다 onboarding/CRM 개입을 설계해야 합니다.”</blockquote>
+<h3>Example 3 — CRM bridge</h3>
+<p>Airbridge/AppsFlyer campaign cohort 중 high-intent cohort를 Mixpanel에서 행동 기준으로 세분화하고, Braze/MoEngage로 onboarding nudge 또는 repeat action campaign을 실행한다.</p>
+<p>Sales point:</p>
+<blockquote>“Acquisition → Product behavior → CRM activation까지 하나의 growth loop로 만들 수 있습니다.”</blockquote>
+<hr />
+<h2>7. Objection handling</h2>
+<h3>Objection 1: “AppsFlyer/Airbridge에도 analytics가 있는데요?”</h3>
+<blockquote>“맞습니다. MMP analytics는 유입 경로와 캠페인 성과를 판단하는 데 강합니다. Mixpanel은 그 고객이 제품 안에서 어떤 행동을 하고 유지되는지를 보는 역할입니다. 서로 대체라기보다, MMP는 acquisition source of truth, Mixpanel은 product behavior source of truth로 나누는 것이 자연스럽습니다.”</blockquote>
+<h3>Objection 2: “이미 GA4로 보고 있습니다.”</h3>
+<blockquote>“GA4는 웹/앱 이벤트를 넓게 보는 데 유용하지만, PM·Growth팀이 cohort/funnel/retention을 빠르게 반복 분석하고 행동 세그먼트를 운영 기준으로 만들기에는 Mixpanel이 더 직접적입니다. 특히 acquisition cohort별 activation quality를 보는 데 강점이 있습니다.”</blockquote>
+<h3>Objection 3: “데이터 연결이 복잡하지 않나요?”</h3>
+<blockquote>“처음부터 모든 데이터를 연결할 필요는 없습니다. 1차로 campaign/source/medium 또는 MMP cohort key와 핵심 product event 5~10개만 연결해도 acquisition → activation → retention의 기본 bridge를 만들 수 있습니다.”</blockquote>
+<hr />
+<h2>8. Suggested mini-offer</h2>
+<h3>Offer name candidates</h3>
+<ol>
+<li><strong>Post-acquisition Behavior Audit</strong></li>
+<li><strong>UA Quality x Product Activation Diagnostic</strong></li>
+<li><strong>Attribution-to-Retention Bridge Workshop</strong></li>
+<li><strong>MMP + Mixpanel Growth Measurement Sprint</strong></li>
+</ol>
+<h3>2-week diagnostic scope</h3>
+<ol>
+<li>Current AppsFlyer/Airbridge measurement map 확인</li>
+<li>핵심 acquisition cohort 정의</li>
+<li>Mixpanel 핵심 activation/retention event 5~10개 매핑</li>
+<li>campaign/source별 onboarding funnel·first value action·D7/D30 retention 확인</li>
+<li>예산/CRM/onboarding next action 후보 3개 제안</li>
+</ol>
+<hr />
+<h2>9. Slide title candidates</h2>
+<ol>
+<li><strong>광고가 만든 전환, 제품 안에서 살아남고 있나요?</strong></li>
+<li><strong>From Incremental Conversion to Retained Customer</strong></li>
+<li><strong>AppsFlyer/Airbridge 이후의 질문: 유입 고객의 행동 품질</strong></li>
+<li><strong>MMP는 유입을, Mixpanel은 유입 이후 성장을 봅니다</strong></li>
+<li><strong>Attribution + Incrementality + Product Behavior = Growth Measurement Loop</strong></li>
+</ol>
+<hr />
+<h2>10. Evidence / confidence</h2>
+<ul>
+<li>AppsFlyer source explicitly emphasizes moving beyond correlation, causal lift, attribution + incrementality side-by-side, and budget decisions based on causal evidence.</li>
+<li>Airbridge signal needs a direct official page capture in the next monitoring run; current Airbridge note is search-supported and should be treated as <code>Needs validation</code> until official source is archived.</li>
+<li>Mixpanel bridge positioning is a sales hypothesis grounded in CMO/Growth/Data persona pains and should be validated in sales calls.</li>
+</ul>
+<p>Confidence:</p>
+<ul>
+<li>AppsFlyer trend: Evidence-backed</li>
+<li>Airbridge inclusion: Needs validation</li>
+<li>Mixpanel bridge talk track: Hypothesis / sales-ready v0</li>
+</ul>
+  <div class="footer">Published to GitHub Pages from sanitized OCEO sales-intelligence notes. Raw monitoring data and secrets are not included.</div>
+</body>
+</html>
