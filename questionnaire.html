@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한의료봉사회 | 활동 데이터 표준화 및 KPI 설정을 위한 사전 질의</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 20px auto; padding: 0 20px; background-color: #f9f9f9; }
+        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        h1, h2 { color: #1a73e8; border-bottom: 2px solid #e0e0e0; padding-bottom: 10px; }
+        .form-group { margin-bottom: 25px; }
+        label { display: block; font-weight: bold; margin-bottom: 8px; color: #444; }
+        input[type="text"], textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        textarea { resize: vertical; min-height: 120px; }
+        button { display: block; width: 100%; padding: 15px; background-color: #1a73e8; color: white; border: none; border-radius: 4px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s; }
+        button:hover { background-color: #1558b8; }
+        button:disabled { background-color: #ccc; cursor: not-allowed; }
+        .message { padding: 20px; border-radius: 5px; margin-top: 20px; text-align: center; }
+        .success { background-color: #e6f4ea; color: #3c763d; border: 1px solid #c9e6d1; }
+        .error { background-color: #f2dede; color: #a94442; border: 1px solid #ebccd1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>사전 질의서</h1>
+        <p>안녕하세요, 대한의료봉사회 귀하. 자문 미팅에 앞서 귀회의 현재 상황과 목표를 더 깊이 이해하고자 몇 가지 질문을 드립니다. 잠시 시간을 내어 답변해 주시면 미팅을 더욱 생산적으로 진행하는 데 큰 도움이 됩니다.</p>
+        <form id="questionnaireForm">
+            <h2>Part 1. 단체 및 활동 현황</h2>
+            <div class="form-group"><label for="org_mission">단체의 핵심 미션과 주요 활동 분야는 무엇인가요?</label><textarea id="org_mission" name="단체의 핵심 미션과 주요 활동 분야" required></textarea></div>
+            <div class="form-group"><label for="main_activities">주요 봉사 활동의 종류와 연간 진행 횟수는 어느 정도인가요? (예: 국내 의료봉사 연 12회, 해외 의료봉사 연 2회 등)</label><textarea id="main_activities" name="주요 봉사 활동의 종류와 연간 진행 횟수" required></textarea></div>
+            <div class="form-group"><label for="org_scale">활동에 참여하는 핵심 인력(의료진, 비의료진 포함) 규모는 어느 정도인가요?</label><input type="text" id="org_scale" name="활동에 참여하는 핵심 인력 규모" required></div>
+            <h2>Part 2. 현재 데이터 관리 방식</h2>
+            <div class="form-group"><label for="data_collection_method">현재 봉사 활동 관련 데이터(참여 인원, 수혜자 수, 진료 기록 등)를 어떤 방식으로 기록/관리하고 계신가요? (예: 엑셀, 수기 장부, 자체 시스템 등)</label><textarea id="data_collection_method" name="현재 봉사 활동 관련 데이터 기록/관리 방식" required></textarea></div>
+<div class="form-group"><label for="data_pain_points">데이터를 기록하고 관리하면서 겪는 가장 큰 어려움은 무엇인가요? (3가지만 꼽는다면)</label><textarea id="data_pain_points" name="데이터 기록 및 관리의 가장 큰 어려움" required></textarea></div>
+            <div class="form-group"><label for="data_metrics_current">현재 활동 성과를 파악하기 위해 주로 어떤 지표들을 보고 계신가요?</label><textarea id="data_metrics_current" name="현재 활동 성과 파악을 위해 보는 지표" required></textarea></div>
+            <h2>Part 3. 목표 및 KPI 설정</h2>
+            <div class="form-group"><label for="ideal_data_usage">'데이터가 잘 정리된다면' 이 데이터를 가장 어떻게 활용하고 싶으신가요? (예: 후원자 대상 성과 보고, 활동 개선점 파악, 정부 지원 사업 신청 등)</label><textarea id="ideal_data_usage" name="정리된 데이터의 이상적인 활용 방안" required></textarea></div>
+            <div class="form-group"><label for="success_definition">단체의 성공적인 운영을 정의하는 가장 중요한 기준은 무엇이라고 생각하시나요? 즉, '우리가 정말 잘하고 있다'고 판단할 수 있는 핵심 기준은 무엇일까요?</label><textarea id="success_definition" name="단체의 성공을 정의하는 가장 중요한 기준" required></textarea></div>
+            <div class="form-group"><label for="desired_kpis">만약 3~5개의 핵심성과지표(KPI)를 설정한다면, 어떤 것들을 측정하고 싶으신가요?</label><textarea id="desired_kpis" name="측정하고 싶은 3~5개 핵심성과지표(KPI)"></textarea></div>
+            <h2>Part 4. 기타</h2>
+            <div class="form-group"><label for="etc_comments">그 외에 데이터 관리 및 운영 구조화와 관련하여 특별히 논의하고 싶거나 공유하고 싶은 내용이 있다면 자유롭게 작성해주세요.</label><textarea id="etc_comments" name="기타 공유하고 싶은 내용"></textarea></div>
+            <button type="submit" id="submitBtn">제출하기</button>
+        </form>
+        <div id="messageDiv" style="display: none;"></div>
+    </div>
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzk5AOT49M76hPrK1U6fD0BXY9L8He6sVKlHbAJh4M1-fZbWIz4PsGFiQSSl5CbtX4Y3g/exec';
+        const form = document.getElementById('questionnaireForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('messageDiv');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = '제출 중...';
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => { data[key] = value; });
+            fetch(SCRIPT_URL, { method: 'POST', mode: 'no-cors', body: JSON.stringify(data) })
+            .then(() => {
+                form.style.display = 'none';
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message success';
+                messageDiv.innerHTML = '<h2>답변이 성공적으로 제출되었습니다.</h2><p>소중한 시간을 내어주셔서 감사합니다. 보내주신 내용을 바탕으로 생산적인 미팅을 준비하겠습니다.</p>';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                messageDiv.style.display = 'block';
+                messageDiv.className = 'message error';
+                messageDiv.innerHTML = '<h2>오류가 발생했습니다.</h2><p>답변 제출에 실패했습니다. 페이지를 새로고침한 후 다시 시도해주세요. 문제가 지속되면 담당자에게 연락주시기 바랍니다.</p>';
+                submitBtn.disabled = false;
+                submitBtn.textContent = '제출하기';
+            });
+        });
+    </script>
+</body>
+</html>
