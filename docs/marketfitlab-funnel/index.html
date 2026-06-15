@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MarketFit Lab Funnel — Weekly Reports</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+           max-width: 880px; margin: 40px auto; padding: 0 20px; line-height: 1.65; color: #172033; }
+    h1 { font-size: 1.8rem; border-bottom: 3px solid #111827; padding-bottom: 10px; }
+    h2 { margin-top: 32px; color: #111827; font-size: 1.15rem; }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 24px; }
+    .latest { background: #eef2ff; border-left: 5px solid #4f46e5; padding: 12px 16px; margin: 16px 0; border-radius: 6px; }
+    .back { font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<div class="meta">
+  <a class="back" href="../index.html">← OCEO Monitoring Reports</a>
+</div>
+
+<h1>📊 MarketFit Lab Weekly Funnel Reports</h1>
+
+<p class="meta">
+  Mixpanel <code>[Live] MarketFit Lab</code> (Project 3497776) 기반 주간 콘텐츠 → 데모 요청 funnel 추세 리포트.<br>
+  분석자: 또롱이 (OCEO Analytics). 매주 직전 완료 7일 데이터를 read-only로 분석.
+</p>
+
+<div class="latest">
+  최신 리포트: <a href="2026-06-15/index.html"><strong>주간 Funnel Report — 2026-06-15</strong></a>
+  <span style="color:#6b7280;"> (분석 기간: 2026-06-08 ~ 2026-06-14)</span>
+</div>
+
+<h2>리포트 히스토리</h2>
+<ul>
+  <li><a href="2026-06-15/index.html">2026-06-15</a> · 분석 기간 2026-06-08 ~ 2026-06-14
+    <span style="color:#6b7280;"> — 방문 1,140 → 블로그 575 (50.4%) → 데모 2 (0.18%)</span>
+  </li>
+</ul>
+
+<h2>분석 정의</h2>
+<ul>
+  <li><strong>Primary Funnel</strong>: 방문(<code>$mp_web_page_view</code>) → 블로그 조회(<code>view_blog_page</code>) → 데모 요청 제출(<code>submit_demo_request</code>)</li>
+  <li><strong>보조 Funnel</strong>: 데모 클릭(<code>click_to_demo_request</code>) → 데모 제출(<code>submit_demo_request</code>)</li>
+  <li><strong>Surrounding events</strong>: <code>articul8_click_demo_request</code>, <code>click_general_button</code>, <code>click_to_growth_consulting_request</code>, <code>submit_growth_consulting_request</code></li>
+</ul>
+
+<h2>운영 원칙</h2>
+<ul>
+  <li>Read-only only. 코호트 생성/CRM 전송/설정 변경 금지.</li>
+  <li>개인정보 값 조회 금지. 본 페이지에는 PII / credential / 개별 사용자 값 일체 미포함.</li>
+  <li>사실 / 가설 / 한계 / 추천 액션 4분리 보고 포맷.</li>
+</ul>
+
+</body>
+</html>

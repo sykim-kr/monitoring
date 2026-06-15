@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📊 MarketFit Lab Funnel Report — 2026-06-15</title>
+  <style>
+    :root {
+      --bg:#f7f8fb; --card:#ffffff; --ink:#172033; --muted:#6b7280;
+      --line:#e5e7eb; --accent:#4f46e5; --warn:#b45309; --ok:#047857; --bad:#b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+           max-width: 980px; margin: 32px auto; padding: 0 20px; line-height: 1.65; color: var(--ink); background: var(--bg); }
+    h1 { font-size: 1.9rem; margin-bottom: 4px; }
+    h2 { margin-top: 36px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); font-size: 1.3rem; }
+    h3 { margin-top: 22px; font-size: 1.05rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+            padding: 18px 22px; margin: 16px 0; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+    .tldr { background: #eef2ff; border-left: 5px solid var(--accent); padding: 14px 18px; border-radius: 6px; }
+    .tldr ul { margin: 6px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.95rem; }
+    th, td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    th { background: #f3f4f6; font-weight: 600; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+    .pill.ok  { background:#d1fae5; color:var(--ok); }
+    .pill.warn{ background:#fef3c7; color:var(--warn); }
+    .pill.bad { background:#fee2e2; color:var(--bad); }
+    .funnel-bar { background:#e5e7eb; border-radius:6px; height:14px; position:relative; overflow:hidden; }
+    .funnel-bar > span { display:block; height:100%; background: linear-gradient(90deg,#4f46e5,#7c3aed); }
+    ul.tight li { margin: 4px 0; }
+    code { background:#f3f4f6; padding:1px 6px; border-radius:4px; font-size: 0.88rem; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+    footer { margin-top: 44px; padding-top: 14px; border-top: 1px solid var(--line);
+             color: var(--muted); font-size: 0.82rem; }
+  </style>
+</head>
+<body>
+
+<h1>📊 MarketFit Lab Funnel Report</h1>
+<div class="meta">
+  분석 기간: <strong>2026-06-08 ~ 2026-06-14</strong> (직전 완료 7일) ·
+  발행일: 2026-06-15 (KST) · 분석자: 또롱이 (OCEO Analytics) ·
+  데이터 소스: Mixpanel Project <code>3497776 [Live] MarketFit Lab</code> (read-only)
+</div>
+
+<!-- ============ TL;DR ============ -->
+<section class="card tldr">
+  <h2 style="border:none; margin:0 0 6px; padding:0;">TL;DR</h2>
+  <ul class="tight">
+    <li><strong>Primary Funnel (방문→블로그→데모): 1,140 → 575 (50.4%) → 2 (0.35%)</strong> · 순서 보정 시 블로그 후 데모 0명.</li>
+    <li><strong>주간 데모 제출 2건</strong>, 데모 클릭(<code>click_to_demo_request</code>) 11명 → 제출 2명 (제출률 18%) · 9명이 클릭만 하고 이탈.</li>
+    <li><strong>articul8 클릭 34건 / 11명</strong>이 별도 파트너 페이지에서 발생. <code>submit_demo_request</code>까지 연결 0건.</li>
+    <li>주말(6/13~14) 트래픽 급감 패턴 정상. <strong>주말 데모 제출 0건</strong>은 평소 패턴과 일치.</li>
+    <li>🚧 <strong>Open Dependency 미해결</strong>: 폼이탈 추적 GTM 태깅이 없어 <code>click→submit</code> 9명의 이탈 원인 불명.</li>
+  </ul>
+</section>
+
+<!-- ============ 1. Primary Funnel ============ -->
+<h2>1. Primary Funnel — 방문 → 블로그 조회 → 데모 요청 제출</h2>
+<div class="card">
+  <p style="color:var(--muted); margin-top:0;">
+    Unique users 기준. JQL로 사용자별 첫 발생 시각 정렬 후 순서 보정 적용.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>단계</th>
+        <th>이벤트</th>
+        <th class="num">Unique Users</th>
+        <th class="num">이전 단계 대비</th>
+        <th>분포</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>① 방문</td>
+        <td><code>$mp_web_page_view</code></td>
+        <td class="num">1,140</td>
+        <td class="num">—</td>
+        <td><div class="funnel-bar"><span style="width:100%"></span></div></td>
+      </tr>
+      <tr>
+        <td>② 블로그 조회 <br><span style="color:var(--muted); font-size:0.8rem;">(전체)</span></td>
+        <td><code>view_blog_page</code></td>
+        <td class="num">575</td>
+        <td class="num">50.4%</td>
+        <td><div class="funnel-bar"><span style="width:50.4%"></span></div></td>
+      </tr>
+      <tr>
+        <td>②' 블로그 조회 <br><span style="color:var(--muted); font-size:0.8rem;">(방문 후)</span></td>
+        <td><code>view_blog_page</code> after visit</td>
+        <td class="num">111</td>
+        <td class="num">9.7%</td>
+        <td><div class="funnel-bar"><span style="width:9.7%"></span></div></td>
+      </tr>
+      <tr>
+        <td>③ 데모 요청 제출</td>
+        <td><code>submit_demo_request</code></td>
+        <td class="num">2</td>
+        <td class="num">방문 대비 0.18%</td>
+        <td><div class="funnel-bar"><span style="width:0.18%"></span></div></td>
+      </tr>
+      <tr>
+        <td>③' 데모 제출 <br><span style="color:var(--muted); font-size:0.8rem;">(블로그 후)</span></td>
+        <td><code>submit_demo_request</code> after blog</td>
+        <td class="num">0</td>
+        <td class="num">—</td>
+        <td><div class="funnel-bar"><span style="width:0%"></span></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>왜 두 가지 ②/③를 같이 보는가</h3>
+  <ul class="tight">
+    <li><strong>전체</strong>: <code>view_blog_page</code>를 한 번이라도 발생시킨 사용자(575명, 50.4%).</li>
+    <li><strong>방문 후</strong>: 사용자별 첫 <code>$mp_web_page_view</code> 시각 이후 <code>view_blog_page</code>가 발생한 사용자(111명, 9.7%).
+      → 464명은 <code>view_blog_page</code>가 <code>$mp_web_page_view</code>보다 먼저 fire되는 케이스로 보임 (페이지 로드 순서 차이로 추정, 정의 한계).</li>
+    <li><strong>데모 제출 2건</strong>은 모두 <code>view_blog_page</code> 없이 발생 (블로그 경유 데모 0건).</li>
+  </ul>
+</div>
+
+<!-- ============ 2. 보조 지표 ============ -->
+<h2>2. 보조 지표 · Surrounding Events</h2>
+
+<div class="card">
+  <h3>2.1 클릭 → 제출 보조 Funnel (<code>click_to_demo_request</code> → <code>submit_demo_request</code>)</h3>
+  <table>
+    <thead>
+      <tr><th>단계</th><th class="num">Unique Users</th><th class="num">이벤트 수</th><th class="num">전환율</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>데모 클릭</td><td class="num">11</td><td class="num">16</td><td class="num">—</td></tr>
+      <tr><td>데모 제출 (클릭 후)</td><td class="num">2</td><td class="num">2</td><td class="num">18.2%</td></tr>
+      <tr><td>이탈 (클릭만)</td><td class="num">9</td><td class="num">—</td><td class="num">81.8%</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); margin:6px 0 0;">
+    11명 중 9명이 클릭만 하고 제출하지 않음. 원인 분리(필드 어려움/검증 오류/이탈 시점/단순 망설임)는 폼 내부 이벤트가 없어 불가.
+  </p>
+</div>
+
+<div class="card">
+  <h3>2.2 일별 이벤트 발생 (events count)</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>날짜</th>
+        <th class="num">$mp_web_page_view</th>
+        <th class="num">view_blog_page</th>
+        <th class="num">click_to_demo_request</th>
+        <th class="num">submit_demo_request</th>
+        <th class="num">articul8_click_demo_request</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>2026-06-08 (월)</td><td class="num">352</td><td class="num">164</td><td class="num">1</td><td class="num">1</td><td class="num">3</td></tr>
+      <tr><td>2026-06-09 (화)</td><td class="num">339</td><td class="num">169</td><td class="num">5</td><td class="num">0</td><td class="num">2</td></tr>
+      <tr><td>2026-06-10 (수)</td><td class="num">279</td><td class="num">146</td><td class="num">6</td><td class="num">1</td><td class="num">10</td></tr>
+      <tr><td>2026-06-11 (목)</td><td class="num">310</td><td class="num">136</td><td class="num">1</td><td class="num">0</td><td class="num">10</td></tr>
+      <tr><td>2026-06-12 (금)</td><td class="num">217</td><td class="num">91</td><td class="num">3</td><td class="num">0</td><td class="num">5</td></tr>
+      <tr><td>2026-06-13 (토)</td><td class="num">127</td><td class="num">49</td><td class="num">0</td><td class="num">0</td><td class="num">4</td></tr>
+      <tr><td>2026-06-14 (일)</td><td class="num">152</td><td class="num">72</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+      <tr style="font-weight:600; background:#f3f4f6;">
+        <td>합계</td><td class="num">1,776</td><td class="num">827</td><td class="num">16</td><td class="num">2</td><td class="num">34</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h3>2.3 기타 surrounding events (7일 합계)</h3>
+  <table>
+    <thead><tr><th>이벤트</th><th class="num">총 이벤트 수</th><th class="num">Unique Users</th></tr></thead>
+    <tbody>
+      <tr><td><code>click_general_button</code></td><td class="num">3</td><td class="num">3</td></tr>
+      <tr><td><code>click_to_growth_consulting_request</code></td><td class="num">4</td><td class="num">3</td></tr>
+      <tr><td><code>submit_growth_consulting_request</code></td><td class="num">0</td><td class="num">0</td></tr>
+    </tbody>
+  </table>
+  <p style="color:var(--muted); margin:6px 0 0;">
+    Growth Consulting 채널은 클릭 3명 → 제출 0건. 데모 funnel과 동일한 "클릭만 하고 이탈" 패턴.
+  </p>
+</div>
+
+<!-- ============ 3. 해석 ============ -->
+<h2>3. 해석 (사실 / 가설 / 한계)</h2>
+<div class="card">
+  <h3>사실 (데이터로 확인)</h3>
+  <ul class="tight">
+    <li>주간 데모 제출은 <strong>2건</strong>. 둘 다 블로그 경유가 아님.</li>
+    <li>블로그 조회 사용자 575명 중 데모 제출자는 0명. <strong>블로그 → 데모 직접 기여가 보이지 않음</strong>.</li>
+    <li>데모 클릭자 11명 중 9명(82%)이 제출 전 이탈.</li>
+    <li>articul8 파트너 페이지 클릭(34건/11명)이 발생하나, <code>submit_demo_request</code>로 이어진 사례 없음.</li>
+    <li>주말 트래픽은 평일의 ~40~50% 수준, 주말 데모 제출 0건은 평소 패턴.</li>
+  </ul>
+
+  <h3>가설 (추가 검증 필요)</h3>
+  <ul class="tight">
+    <li><strong>H1.</strong> 블로그 콘텐츠는 데모 전환의 직접 트리거보다는 <em>인지·재방문 자산</em>으로 작동. 데모는 별도 페이지(솔루션/툴 상세) 경유 가능성.</li>
+    <li><strong>H2.</strong> 데모 클릭 후 이탈 9명의 원인은 (a) 폼 필드 부담, (b) 의도가 약한 탐색 클릭, (c) 폼 검증/에러 중 1개 이상. 분리하려면 폼 내부 이벤트 필요.</li>
+    <li><strong>H3.</strong> articul8 채널은 단독 페이지가 강한 의도 신호는 발생시키나 자체 데모 폼 전환이 약하거나, 다른 페이지 데모 폼으로 이어지지 않음 → 페이지 내 CTA 점검 필요.</li>
+    <li><strong>H4.</strong> <code>view_blog_page</code>가 <code>$mp_web_page_view</code>보다 먼저 fire되는 464명 케이스는 SDK init 순서 차이일 가능성. 정의 정리 필요.</li>
+  </ul>
+
+  <h3>한계</h3>
+  <ul class="tight">
+    <li><strong>표본 크기</strong>: 데모 제출 2건은 통계적 노이즈 범위. 주간 결론보다 4~8주 누적 추세로 봐야 함.</li>
+    <li><strong>폼 내부 visibility 부재</strong>: form_start / field_focus / form_error / form_abandon 미태깅 — 9명 이탈 원인 분리 불가.</li>
+    <li><strong>이벤트 fire 순서</strong>: <code>view_blog_page</code>가 <code>$mp_web_page_view</code>보다 먼저 발생하는 케이스 다수. funnel 정의 의존성 큼.</li>
+    <li><strong>채널·캠페인 차원 미분리</strong>: UTM/referrer 차원 cross-check 미포함 (다음 회차 검토 항목).</li>
+  </ul>
+</div>
+
+<!-- ============ 4. 추천 액션 ============ -->
+<h2>4. 추천 액션</h2>
+<div class="card">
+  <table>
+    <thead>
+      <tr><th>#</th><th>액션</th><th>우선순위</th><th>기대 효과</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>GTM 폼이탈 태깅 설계·구현</strong>: <code>form_start</code> / 필드 blur / <code>form_error</code> / <code>form_abandon</code> 4종.</td>
+        <td><span class="pill bad">P0</span></td>
+        <td>9명 이탈 원인 분리. 향후 모든 weekly funnel 의미 확보.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>articul8 페이지 CTA 점검</strong>: 11명 / 34건 클릭이 submit으로 연결되는 경로 확인 (별도 폼 or 공용 폼).</td>
+        <td><span class="pill warn">P1</span></td>
+        <td>고의도 트래픽 누수 방지.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>4주 누적 funnel 보완 리포트</strong>: 2026-05-18 ~ 06-14로 데모 제출 표본 ≥10건 확보 후 블로그 기여도 재평가.</td>
+        <td><span class="pill warn">P1</span></td>
+        <td>주간 노이즈 제거, 블로그→데모 가설(H1) 검증.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>이벤트 fire 순서 진단</strong>: <code>view_blog_page</code>가 <code>$mp_web_page_view</code>보다 먼저 발생하는 464명 케이스 SDK 초기화 점검.</td>
+        <td><span class="pill ok">P2</span></td>
+        <td>funnel 정의 신뢰도 확보.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>채널·UTM 차원 추가</strong>: 다음 회차부터 데모 제출자/클릭자의 진입 채널 breakdown.</td>
+        <td><span class="pill ok">P2</span></td>
+        <td>유료/오가닉/파트너 채널 ROI 가시화.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ============ 5. Validation & Caveats ============ -->
+<h2>5. Validation &amp; Caveats</h2>
+<div class="card">
+  <ul class="tight">
+    <li><strong>데이터 소스</strong>: Mixpanel <code>[Live] MarketFit Lab</code> · read-only · query 시각 2026-06-15 KST 09:13.</li>
+    <li><strong>집계 단위</strong>: Primary Funnel은 unique users (JQL <code>groupByUser</code>). 일별 표는 event count (general).</li>
+    <li><strong>시간대</strong>: Mixpanel project 기본 시간대 기준 일자 집계.</li>
+    <li><strong>표본 한계</strong>: 데모 제출 N=2 — 결론은 가설 수준. 4~8주 누적 데이터로 재검증 권장.</li>
+    <li><strong>개인정보</strong>: 본 리포트에 PII / distinct_id / 개별 사용자 값 일체 포함하지 않음.</li>
+    <li><strong>Funnel 정의 차이</strong>: <code>view_blog_page</code> 575명 중 111명만 "방문 후 블로그"로 분류 — 정의 의존성 있음.</li>
+    <li><strong>비교 기준점</strong>: 이전 주(2026-06-01 ~ 06-07) 데이터는 본 회차 미포함 (Δ 비교는 다음 회차 P1).</li>
+  </ul>
+</div>
+
+<!-- ============ 6. Open Dependency ============ -->
+<h2>6. Open Dependency</h2>
+<div class="card">
+  <p>
+    <span class="pill bad">미해결</span>
+    <strong>폼이탈 추적용 GTM(Google Tag Manager) 태깅 접근 권한 확보 여부</strong>
+  </p>
+  <ul class="tight">
+    <li>현재 <code>click_to_demo_request</code> → <code>submit_demo_request</code> 구간이 비어 있어,
+        제출 0/낮은 전환이 <strong>tracking 누락</strong>인지 <strong>실제 전환 부재</strong>인지 구분 불가.</li>
+    <li>필요 태깅: <code>form_start</code> / 필드 <code>blur</code> / <code>form_error</code> / <code>form_abandon</code>.</li>
+    <li>권한 확보 시 다음 작업: 폼이탈 이벤트 태깅 설계 → 검증 → 향후 weekly funnel에 funnel step 추가.</li>
+    <li>참고: <code>oceo/projects/2026-05-22-mixpanel-headless-live-query/weekly-marketfitlab-funnel-report.md</code></li>
+  </ul>
+</div>
+
+<footer>
+  Generated by 또롱이 (OCEO Analytics Agent) · 2026-06-15 KST ·
+  Mixpanel Project: <code>3497776</code> · 본 리포트는 공개 합성 데이터만 포함합니다 (credential/개인정보 미포함).
+</footer>
+
+</body>
+</html>
