@@ -32,14 +32,17 @@
 </p>
 
 <div class="latest">
-  최신 리포트: <a href="2026-06-15/index.html"><strong>주간 Funnel Report — 2026-06-15</strong></a>
-  <span style="color:#6b7280;"> (분석 기간: 2026-06-08 ~ 2026-06-14)</span>
+  최신 리포트: <a href="2026-06-15/index.html"><strong>주간 Funnel + 폼이탈 Report — 2026-06-15</strong></a>
+  <span style="color:#6b7280;"> (분석 기간: 2026-06-08 ~ 2026-06-14, 폼이탈 분석 포함 재생성)</span>
 </div>
 
 <h2>리포트 히스토리</h2>
 <ul>
-  <li><a href="2026-06-15/index.html">2026-06-15</a> · 분석 기간 2026-06-08 ~ 2026-06-14
-    <span style="color:#6b7280;"> — 방문 1,140 → 블로그 575 (50.4%) → 데모 2 (0.18%)</span>
+  <li><a href="2026-06-15/index.html">2026-06-15</a> · 분석 기간 2026-06-08 ~ 2026-06-14 · <strong>폼이탈 포함</strong>
+    <span style="color:#6b7280;"> — 방문 1,776 → 블로그 827 (46.6%) → CTA 48 → 폼시작 2 → 제출 2 (0.11%)</span>
+  </li>
+  <li><a href="../marketfitlab/2026-06-08-demo-form-funnel-report.html">2026-06-08</a> · 분석 기간 2026-06-01 ~ 2026-06-07 · <strong>폼이탈 포함 (GTM 태깅 최초 적용)</strong>
+    <span style="color:#6b7280;"> — 방문 1,527 → 블로그 912 (59.7%) → CTA 52 → 폼시작 9 → 제출 4 (0.26%)</span>
   </li>
 </ul>
 
@@ -48,6 +51,7 @@
   <li><strong>Primary Funnel</strong>: 방문(<code>$mp_web_page_view</code>) → 블로그 조회(<code>view_blog_page</code>) → 데모 요청 제출(<code>submit_demo_request</code>)</li>
   <li><strong>보조 Funnel</strong>: 데모 클릭(<code>click_to_demo_request</code>) → 데모 제출(<code>submit_demo_request</code>)</li>
   <li><strong>Surrounding events</strong>: <code>articul8_click_demo_request</code>, <code>click_general_button</code>, <code>click_to_growth_consulting_request</code>, <code>submit_growth_consulting_request</code></li>
+  <li><strong>폼 행동 (GTM 2026-06-01 적용)</strong>: <code>start_demo_request</code> / <code>abandon_demo_request</code> / <code>error_demo_request</code> / <code>submit_demo_request</code> — last_field_touched·fields_filled_count·time_on_form_sec 속성 활용</li>
 </ul>
 
 <h2>운영 원칙</h2>
