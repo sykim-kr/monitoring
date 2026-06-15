@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Partner Intelligence — 2026-06-15</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --accent: #6c63ff;
+      --accent2: #ff6b6b;
+      --accent3: #43d9ad;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --border: #2d3148;
+      --tag-ai: #7c3aed;
+      --tag-comp: #0ea5e9;
+      --tag-research: #059669;
+      --tag-market: #d97706;
+      --tag-watch: #6366f1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px 24px;
+    }
+    .header-inner { max-width: 860px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+    .meta {
+      color: var(--text2);
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .meta span { display: flex; align-items: center; gap: 5px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 32px 24px 64px; }
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .signal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .signal-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 100%;
+    }
+    .card-1::before { background: var(--accent); }
+    .card-2::before { background: var(--accent2); }
+    .card-3::before { background: var(--accent3); }
+    .card-4::before { background: #f59e0b; }
+    .card-5::before { background: #06b6d4; }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .card-num {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text2);
+      min-width: 24px;
+    }
+    .card-title { font-size: 17px; font-weight: 700; color: #fff; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .tag-company { background: #1e293b; color: var(--text2); border: 1px solid var(--border); }
+    .tag-ai { background: rgba(124,58,237,0.2); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
+    .tag-comp { background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3); }
+    .tag-research { background: rgba(5,150,105,0.15); color: #34d399; border: 1px solid rgba(5,150,105,0.3); }
+    .tag-market { background: rgba(217,119,6,0.15); color: #fbbf24; border: 1px solid rgba(217,119,6,0.3); }
+    .source-link {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .source-link:hover { text-decoration: underline; }
+    .why-box {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    @media (max-width: 600px) { .action-grid { grid-template-columns: 1fr; } }
+    .action-item {
+      background: #12151e;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .action-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text2);
+      margin-bottom: 5px;
+    }
+    .action-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .decision-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+    .decision-act { background: rgba(67,217,173,0.15); color: var(--accent3); border: 1px solid rgba(67,217,173,0.3); }
+    .decision-watch { background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+    .backlog-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .backlog-table th {
+      text-align: left;
+      color: var(--text2);
+      font-weight: 600;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .backlog-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+    .backlog-table tr:last-child td { border-bottom: none; }
+    .p-high { color: #f87171; font-weight: 700; }
+    .p-med { color: #fbbf24; font-weight: 700; }
+    .caveat-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .caveat-item {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      font-size: 13px;
+      color: var(--text2);
+      border-bottom: 1px solid #1e2238;
+    }
+    .caveat-item:last-child { border-bottom: none; }
+    .caveat-num { color: var(--text2); font-weight: 700; min-width: 20px; }
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 24px;
+      text-align: center;
+      color: var(--text2);
+      font-size: 12px;
+    }
+    .stat-highlight {
+      background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(108,99,255,0.05));
+      border: 1px solid rgba(108,99,255,0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 22px;
+      font-weight: 800;
+      color: #a78bfa;
+    }
+    .stat-label { font-size: 12px; font-weight: 500; color: var(--text2); display: block; }
+    .stat-highlight-red {
+      background: linear-gradient(135deg, rgba(255,107,107,0.15), rgba(255,107,107,0.05));
+      border: 1px solid rgba(255,107,107,0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 22px;
+      font-weight: 800;
+      color: #f87171;
+    }
+    .stat-highlight-green {
+      background: linear-gradient(135deg, rgba(67,217,173,0.15), rgba(67,217,173,0.05));
+      border: 1px solid rgba(67,217,173,0.3);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 22px;
+      font-weight: 800;
+      color: #43d9ad;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div class="badge">OCEO · Weekly Partner Intelligence</div>
+    <h1>Weekly Partner Intelligence — 2026-06-15</h1>
+    <div class="meta">
+      <span>📅 2026-06-15 10:00 KST</span>
+      <span>🏢 7개사 모니터링</span>
+      <span>🔍 Apify RAG Web Browser</span>
+      <span>📊 Top 5 Signals</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="section-title">Top 5 Signals</div>
+
+  <!-- Signal 1 -->
+  <div class="signal-card card-1">
+    <div class="card-header">
+      <span class="card-num">01</span>
+      <div class="card-title">Mixpanel — "2026 State of Digital Analytics" 연간 벤치마크 리포트 공개</div>
+    </div>
+    <div class="tags">
+      <span class="tag tag-company">Mixpanel</span>
+      <span class="tag tag-research">Benchmark 2026</span>
+      <span class="tag tag-ai">AI Positioning</span>
+      <span class="tag tag-market">Proprietary Research</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size:12px; color:var(--text2);">Source: </span>
+      <a href="https://mixpanel.com/blog/digital-analytics-benchmarks-2026/" class="source-link" target="_blank">mixpanel.com/blog/digital-analytics-benchmarks-2026/</a>
+    </div>
+    <div class="stat-highlight">
+      22B+ 유저 액션 분석 <span class="stat-label">8개 산업 (AI, B2B, 이커머스, 핀테크, 미디어, 모바일게임 등) — 2026 State of Digital Analytics</span>
+    </div>
+    <div class="why-box">
+      Mixpanel이 22억 건 이상의 유저 액션, 8개 산업 데이터를 기반으로 한 연간 벤치마크 리포트를 발행. 핵심 메시지: <strong>"성장은 이제 제품 안에서 일어난다(Growth has moved decisively inside the product)."</strong> 채널 마케팅이 아닌 Activation→Retention 최적화가 진짜 성장 엔진. 또한 <strong>"AI가 데이터의 관문(front door)이 됐다"</strong>는 키워드로 AI 포지셔닝도 강화. 특히 AI 제품군에서 "engagement 감소 = automation 성공 신호"라는 새로운 해석 프레임을 제시, Product Analytics의 맥락 중요성 부각.
+    </div>
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-label">💬 Sales Talk Track</div>
+        <div class="action-text">"Mixpanel 2026 벤치마크: 성장은 이제 채널이 아닌 제품 안에서 일어납니다. 귀사 업종 벤치마크 기준으로 현재 어디 계신지 확인해보시겠어요?"</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📊 Proposal/Deck Update</div>
+        <div class="action-text">제안서 "Why Product Analytics Now" 슬라이드에 22B 이벤트 분석 기반 인사이트 인용. 업종별 벤치마크 섹션 추가.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📬 Customer Outreach Angle</div>
+        <div class="action-text">현재 GA4/Amplitude 쓰는 잠재 고객에 "귀사 업종 벤치마크 공유" 형태로 아웃리치 메시지 활용.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">👥 Persona Affected</div>
+        <div class="action-text">exec_cmo / data_analytics</div>
+      </div>
+    </div>
+    <div class="decision-badge decision-act">✅ Act — 리포트 다운로드 후 한국 고객 대상 업종별 요약본 제작 검토</div>
+  </div>
+
+  <!-- Signal 2 -->
+  <div class="signal-card card-2">
+    <div class="card-header">
+      <span class="card-num">02</span>
+      <div class="card-title">Braze — "2026 Customer Engagement Review: AI Innovation Meets the Trust Plateau" 발표</div>
+    </div>
+    <div class="tags">
+      <span class="tag tag-company">Braze</span>
+      <span class="tag tag-ai">AI Trust Gap</span>
+      <span class="tag tag-research">CER 2026</span>
+      <span class="tag tag-market">Agentic Commerce</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size:12px; color:var(--text2);">Source: </span>
+      <a href="https://investors.braze.com/news/news-details/2026/The-2026-Braze-Customer-Engagement-Review-AI-Innovation-Meets-the-Trust-Plateau/default.aspx" class="source-link" target="_blank">investors.braze.com — 2026 Customer Engagement Review</a>
+    </div>
+    <div class="stat-highlight-red">
+      46% <span class="stat-label">소비자가 2026년 말까지 AI 에이전트를 통해 브랜드와 상호작용할 것으로 예상 (현재 19%)</span>
+    </div>
+    <div class="stat-highlight-red">
+      43% <span class="stat-label">개인 데이터 오용 시 브랜드 이탈 의향 있는 소비자 비율</span>
+    </div>
+    <div class="why-box">
+      Braze 2026 글로벌 연간 보고서. 2,200명 마케팅 임원 + 4,000명 소비자 + 779개 Braze 고객사 데이터 기반. 핵심 화두: <strong>"Agentic Commerce"</strong> — bot-to-bot 커머스 시대 선언. AI 에이전트 채택률이 급등하는 동시에 <strong>"신뢰 정체(Trust Plateau)"</strong> 이슈도 부각. Top-performing Braze 고객은 AI로 구매 의도를 예측, 30% 더 높은 실적. 마케터의 고객 직접 관계 상실 우려가 핵심 narrative.
+    </div>
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-label">💬 Sales Talk Track</div>
+        <div class="action-text">"Braze 글로벌 조사: 2026년 말 소비자의 46%가 AI 에이전트로 브랜드와 상호작용합니다. 이 전환을 준비한 마케팅 자동화가 없다면, 직접 고객 관계가 사라집니다."</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📊 Proposal/Deck Update</div>
+        <div class="action-text">MoEngage/Braze 제안서 Why Now 슬라이드에 46%/43% 수치 삽입. Trust Plateau 섹션에서 데이터 거버넌스 중요성 강조.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📬 Customer Outreach Angle</div>
+        <div class="action-text">이미 CRM 툴 보유 고객에게 "AI 에이전트 시대 대비 마케팅 자동화 업그레이드" 주제로 재접근.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">👥 Persona Affected</div>
+        <div class="action-text">growth_crm / exec_cmo</div>
+      </div>
+    </div>
+    <div class="decision-badge decision-act">✅ Act — 전문 리포트 다운로드 후 한국 시장 인사이트 분리, 세미나 자료화</div>
+  </div>
+
+  <!-- Signal 3 -->
+  <div class="signal-card card-3">
+    <div class="card-header">
+      <span class="card-num">03</span>
+      <div class="card-title">Amplitude — "Wave" AI 프로덕트 에이전트 출시: self-improving product 시대 선언</div>
+    </div>
+    <div class="tags">
+      <span class="tag tag-company">Amplitude</span>
+      <span class="tag tag-ai">AI Product Launch</span>
+      <span class="tag tag-comp">Competitive Repositioning</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size:12px; color:var(--text2);">Source: </span>
+      <a href="https://amplitude.com/blog" class="source-link" target="_blank">amplitude.com/blog — Wave product launch</a>
+    </div>
+    <div class="why-box">
+      Amplitude가 <strong>Wave</strong>라는 AI 프로덕트 에이전트를 공개. "기회를 발굴하고, 개선을 직접 ship하며, 팀이 self-improving 제품을 만들도록 지원하는 proactive product agent." 동시에 Zoning Insights(웹 인텔리전스), AI Evals for PMs, Design Agent(Claude 기반), Hostinger 20%+ conversion lift 사례도 함께 발표. Amplitude의 포지셔닝이 <strong>"분석 도구"</strong>에서 <strong>"AI 기반 제품 성장 자동화"</strong>로 이동 중. Mixpanel과의 직접적인 AI 기능 경쟁 구도 본격화.
+    </div>
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-label">💬 Sales Talk Track</div>
+        <div class="action-text">"Amplitude Wave가 나왔습니다. Amplitude는 AI로 action까지 자동화하는 방향, Mixpanel은 분석의 정확도와 커스텀 자유도 방향. 귀사가 더 필요한 게 무엇인지부터 정의해봅시다."</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📊 Proposal/Deck Update</div>
+        <div class="action-text">경쟁사 포지셔닝 섹션에 Wave 업데이트. "Amplitude = 자동화 방향 / Mixpanel = 분석 깊이·자유도 방향" 대비 포인트 정리.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📬 Customer Outreach Angle</div>
+        <div class="action-text">Amplitude 현 사용 고객에게 "Wave가 실제 ROI 증명 가능한가" 관점의 도입 검토 지원 제안.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">👥 Persona Affected</div>
+        <div class="action-text">product_pm / exec_cmo</div>
+      </div>
+    </div>
+    <div class="decision-badge decision-watch">👀 Watch — Wave 실제 기능 데모 확인 후 고객 미팅 레퍼런스 활용 시점 판단</div>
+  </div>
+
+  <!-- Signal 4 -->
+  <div class="signal-card card-4">
+    <div class="card-header">
+      <span class="card-num">04</span>
+      <div class="card-title">Airbridge — "GA4 vs. MMP: 구독·AI 앱이 2026 Google로 매출을 잃는 이유"</div>
+    </div>
+    <div class="tags">
+      <span class="tag tag-company">Airbridge / AB180</span>
+      <span class="tag tag-comp">GA4 Migration Angle</span>
+      <span class="tag tag-ai">Revenue Integrity</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size:12px; color:var(--text2);">Source: </span>
+      <a href="https://www.airbridge.io/en/blog/ga4-vs-mmp-why-subscription-ai-apps-are-losing-revenue-with-google-in-2026-and-how-to-fix-it" class="source-link" target="_blank">airbridge.io — GA4 vs. MMP 2026</a>
+    </div>
+    <div class="stat-highlight">
+      "Attribution 오류는 보고 문제가 아니라 매출 무결성(revenue integrity) 문제다" <span class="stat-label">— Airbridge 2026 공식 블로그</span>
+    </div>
+    <div class="why-box">
+      Airbridge가 GA4 전용 사용자를 직접 타깃하는 포지셔닝 콘텐츠. 핵심 주장: <strong>"구독/AI 앱에서 GA4만 쓰면 attribution이 틀려서 매출 계산 자체가 틀린다."</strong> GA4는 cross-platform analytics용이지 mobile attribution 시스템이 아님. 구독 앱은 수익이 설치 이후 수일~수주 후 발생하므로 GA4가 trials, renewals를 드롭/재할당하는 구조적 문제 발생. Airbridge가 AppsFlyer/Adjust 대비 가격 경쟁력으로 국내 스타트업 공략 강화 중인 시점의 신호.
+    </div>
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-label">💬 Sales Talk Track</div>
+        <div class="action-text">"Airbridge 공식 블로그도 인정합니다 — GA4만 쓰면 구독 앱의 진짜 매출 기여를 알 수 없습니다. AppsFlyer가 그 문제를 해결하는 시스템 오브 레코드입니다."</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📊 Proposal/Deck Update</div>
+        <div class="action-text">AppsFlyer 제안서에 GA4 한계 섹션 보강. "subscription/AI app = MMP 필수"라는 포지셔닝 강화.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📬 Customer Outreach Angle</div>
+        <div class="action-text">GA4만 쓰는 모바일 앱 운영사에게 "앱 매출 측정 정확도 검진" 메시지로 어프로치.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">👥 Persona Affected</div>
+        <div class="action-text">data_analytics / exec_cmo</div>
+      </div>
+    </div>
+    <div class="decision-badge decision-act">✅ Act — 국내 구독 앱/AI 앱 운영사 타깃 세일즈 스크립트에 반영</div>
+  </div>
+
+  <!-- Signal 5 -->
+  <div class="signal-card card-5">
+    <div class="card-header">
+      <span class="card-num">05</span>
+      <div class="card-title">AppsFlyer — Incrementality 측정 기능 공식 제품 페이지로 승격</div>
+    </div>
+    <div class="tags">
+      <span class="tag tag-company">AppsFlyer</span>
+      <span class="tag tag-research">Product Launch</span>
+      <span class="tag tag-market">Incrementality Testing</span>
+    </div>
+    <div style="margin-bottom: 10px;">
+      <span style="font-size:12px; color:var(--text2);">Source: </span>
+      <a href="https://www.appsflyer.com/products/measurement/incrementality/" class="source-link" target="_blank">appsflyer.com/products/measurement/incrementality/</a>
+    </div>
+    <div class="stat-highlight-green">
+      "Last-touch attribution + Incrementality testing — 한 플랫폼에서" <span class="stat-label">— AppsFlyer Incrementality 제품 페이지 2026</span>
+    </div>
+    <div class="why-box">
+      AppsFlyer가 인크리멘털리티(증분 효과) 측정 기능을 공식 제품 페이지로 승격. <strong>"자동화된 실험 설계 + 빠른 결과 + 단일 대시보드에서 채널별 lift 비교"</strong>를 전면에 내세움. 기존에 별도 BI 설정이 필요했던 인크리멘털리티 테스트를 AppsFlyer 플랫폼 내 원스톱으로 구현. "last-touch attribution만으로는 부족하다"는 시장 니즈를 수용한 전략적 포지셔닝 변화. 특히 주요 Ad Network와 직접 통합으로 채널 synergy 비교 가능.
+    </div>
+    <div class="action-grid">
+      <div class="action-item">
+        <div class="action-label">💬 Sales Talk Track</div>
+        <div class="action-text">"이제 AppsFlyer 하나로 attribution + incrementality testing까지 가능합니다. 실제 캠페인 ROI를 증명하는 완전한 측정 구조를 만들 수 있습니다."</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📊 Proposal/Deck Update</div>
+        <div class="action-text">AppsFlyer 제안서에 Incrementality 기능 섹션 추가. A/B 테스트 비용 절감 + 예산 최적화 ROI 수치 포함.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">📬 Customer Outreach Angle</div>
+        <div class="action-text">현재 AppsFlyer 사용 중이나 incrementality testing 미활용 고객에게 "숨겨진 기능 활용" 형태로 분기별 리뷰 제안.</div>
+      </div>
+      <div class="action-item">
+        <div class="action-label">👥 Persona Affected</div>
+        <div class="action-text">data_analytics / exec_cmo</div>
+      </div>
+    </div>
+    <div class="decision-badge decision-act">✅ Act — 현 AppsFlyer 고객사 대상 QBR 어젠다에 포함</div>
+  </div>
+
+  <!-- Sales Backlog -->
+  <div class="section-title">Sales Backlog Candidates</div>
+  <div class="signal-card" style="padding: 16px;">
+    <table class="backlog-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Signal</th>
+          <th>Action</th>
+          <th>Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mixpanel 2026 벤치마크 → 업종별 요약본 제작</td>
+          <td>리포트 다운로드 → 한국 고객 대상 카드뉴스/요약본 제작 (이커머스·AI·핀테크 우선)</td>
+          <td class="p-high">🔴 이번 주</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Braze CER Trust Plateau → MoEngage 제안서 Why Now 슬라이드 반영</td>
+          <td>46%/43% 수치 슬라이드 삽입, Agentic Commerce 섹션 추가</td>
+          <td class="p-med">🟠 2주 내</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>AppsFlyer Incrementality → 현 고객사 QBR 어젠다 포함</td>
+          <td>다음 QBR 전 기능 업데이트 슬라이드 1장 추가</td>
+          <td class="p-med">🟠 다음 QBR 전</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Caveats -->
+  <div class="section-title">Caveats &amp; Next Improvements</div>
+  <div class="caveat-box">
+    <div class="caveat-item">
+      <span class="caveat-num">1</span>
+      <span><strong>YouTube/Instagram 미실행:</strong> Apify RAG Web Browser는 공식 도메인 기반 수집에 최적화. 소셜 플랫폼 신호는 별도 YouTube Actor / 소셜 모니터링 레이어 필요. 향후 개선 과제로 등록.</span>
+    </div>
+    <div class="caveat-item">
+      <span class="caveat-num">2</span>
+      <span><strong>MoEngage 수집 품질 낮음:</strong> 내비게이션/필터 링크 위주로 수집되어 Top 5 제외. 다음 주 쿼리를 더 구체적인 타이틀 키워드로 수정 필요 (예: "MoEngage AI personalization results case study 2026").</span>
+    </div>
+    <div class="caveat-item">
+      <span class="caveat-num">3</span>
+      <span><strong>VWO 신규 AI 콘텐츠 미확인:</strong> 수집된 내용이 기존 A/B testing 교육 자료 중심. VWO의 2026 AI experimentation 신규 기능 발표 여부는 별도 확인 필요.</span>
+    </div>
+    <div class="caveat-item">
+      <span class="caveat-num">4</span>
+      <span><strong>Amplitude Wave URL 직접 미수집:</strong> amplitude.com/blog 메인 페이지에서 Wave 발표 확인. 개별 Wave 포스트 URL(amplitude.com/blog/wave)은 다음 주 직접 수집 쿼리 추가 필요.</span>
+    </div>
+  </div>
+
+</div>
+<div class="footer">
+  Weekly Partner Intelligence · OCEO (Office of CEO) · 크롱 · 2026-06-15<br>
+  Public source synthesis only. No raw datasets, personal data, tokens, or confidential information included.
+</div>
+</body>
+</html>
