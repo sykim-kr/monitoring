@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Partner Intelligence — 2026-06-22</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #22263a;
+      --accent: #6c63ff;
+      --accent2: #ff6b6b;
+      --accent3: #43d9ad;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --border: #2d3148;
+      --tag-ai: #7c3aed;
+      --tag-comp: #0ea5e9;
+      --tag-research: #059669;
+      --tag-market: #d97706;
+      --tag-funding: #e11d48;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      padding: 0 0 60px;
+    }
+    .header {
+      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .header .meta {
+      font-size: 0.8rem;
+      color: var(--text2);
+    }
+    .caveat-banner {
+      background: #2d1a00;
+      border: 1px solid #d97706;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin: 24px auto;
+      max-width: 880px;
+      font-size: 0.82rem;
+      color: #fbbf24;
+    }
+    .caveat-banner strong { color: #f59e0b; }
+    .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent3);
+      margin: 36px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .signal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .signal-card:hover { border-color: var(--accent); }
+    .signal-num {
+      position: absolute;
+      top: -12px;
+      left: 20px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+    .signal-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .signal-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .badge {
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      display: inline-block;
+    }
+    .badge-company { background: var(--surface2); color: var(--text2); border: 1px solid var(--border); }
+    .badge-ai { background: #4c1d95; color: #c4b5fd; }
+    .badge-comp { background: #0c4a6e; color: #7dd3fc; }
+    .badge-research { background: #064e3b; color: #6ee7b7; }
+    .badge-market { background: #451a03; color: #fcd34d; }
+    .badge-funding { background: #4c0519; color: #fda4af; }
+    .badge-persona { background: var(--surface2); color: var(--accent3); border: 1px solid #1e3a3a; font-size: 0.7rem; }
+    .signal-link { font-size: 0.75rem; color: var(--text2); margin-bottom: 14px; word-break: break-all; }
+    .signal-link a { color: var(--accent); text-decoration: none; }
+    .signal-link a:hover { text-decoration: underline; }
+    .signal-body p { color: var(--text2); font-size: 0.88rem; margin-bottom: 10px; }
+    .signal-body strong { color: var(--text); }
+    .action-grid {
+      background: var(--surface2);
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+    .action-grid h4 { font-size: 0.8rem; font-weight: 700; color: var(--accent3); margin-bottom: 10px; }
+    .action-row {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 4px 12px;
+      font-size: 0.82rem;
+      margin-bottom: 6px;
+    }
+    .action-label { color: var(--text2); font-weight: 600; }
+    .action-value { color: var(--text); }
+    .verdict-act { color: #43d9ad; font-weight: 700; }
+    .verdict-watch { color: #fbbf24; font-weight: 700; }
+    .verdict-ignore { color: var(--text2); font-weight: 700; }
+    .backlog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .backlog-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .backlog-row { font-size: 0.82rem; color: var(--text2); margin-bottom: 3px; }
+    .backlog-row strong { color: var(--text); }
+    .priority-high { color: #f87171; }
+    .priority-med { color: #fbbf24; }
+    .footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text2);
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Weekly Partner Intelligence</h1>
+  <div class="meta">2026-06-22 &nbsp;·&nbsp; OCEO Intelligence &nbsp;·&nbsp; 수집: Apify RAG Web Browser + Web Fetch fallback</div>
+</div>
+
+<div class="container">
+
+  <div class="caveat-banner">
+    ⚠️ <strong>수집 제한:</strong> Apify 계정 메모리 한도 초과(8192MB)로 Braze 외 6개 쿼리 실패. 나머지는 직접 web fetch + Gemini web search로 fallback. 품질 유지됨. 개선: 순차 실행 전략 또는 Apify 유료 업그레이드 검토 필요.
+  </div>
+
+  <div class="section-title">🔍 Top 5 Signals</div>
+
+  <!-- SIGNAL 1 -->
+  <div class="signal-card">
+    <span class="signal-num">#1</span>
+    <div class="signal-title">Mixpanel AI — 전 고객 GA 롤아웃 진행 중 (2026년 6월까지)</div>
+    <div class="signal-meta">
+      <span class="badge badge-company">Mixpanel</span>
+      <span class="badge badge-ai">AI positioning</span>
+      <span class="badge badge-ai">GA rollout</span>
+      <span class="badge badge-persona">product_pm · data_analytics · exec_cmo</span>
+    </div>
+    <div class="signal-link">🔗 <a href="https://mixpanel.com/blog/mixpanel-ai/" target="_blank">mixpanel.com/blog/mixpanel-ai/</a></div>
+    <div class="signal-body">
+      <p>Mixpanel이 <strong>"Always-On Product Intelligence System"</strong>으로 정의한 Mixpanel AI를 전 고객 순차 롤아웃 중 (6월 완료 예정). 단순 기능 추가가 아닌 포지셔닝 전환 — 쿼리 기반 분석에서 AI가 먼저 이상 감지·인사이트 제안·다음 단계 추천하는 상시 운영 체계로.</p>
+      <p><strong>구성 요소:</strong> Mixpanel Agent (상시 대기 product analyst) / Onboarding Agent (이벤트 스키마 자동 제안) / Dashboard Agent (자연어→멀티 차트 대시보드) / <strong>Verified Mode</strong> (AI 쿼리 가능 이벤트를 admin이 제어 → 거버넌스 보장). MXP 2026 컨퍼런스 AI-first vision 발표. Claude, ChatGPT, Cursor, Slack, Glean 네이티브 통합.</p>
+      <p><strong>핵심 의미:</strong> SY님이 세일즈하는 포지션 — "분석은 데이터팀에 물어봐야 한다"에서 "PM/마케터가 AI로 즉시 답변"으로 전환 — 을 Mixpanel이 직접 제품으로 구현하기 시작. 세일즈 스크립트 업데이트 타이밍.</p>
+    </div>
+    <div class="action-grid">
+      <h4>👩‍💼 SY님이 어떻게 써먹을까</h4>
+      <div class="action-row"><span class="action-label">Sales talk track</span><span class="action-value">"Mixpanel AI가 지금 전 고객에게 열리고 있어요. 지금 도입하면 AI analytics 체계를 선점하는 겁니다 — 나중이면 따라가는 겁니다." 타이밍 압박 포인트.</span></div>
+      <div class="action-row"><span class="action-label">Proposal update</span><span class="action-value">Why Mixpanel 섹션에 Always-On Product Intelligence 다이어그램 삽입. Verified Mode → 데이터팀 objection 해소 슬라이드 추가.</span></div>
+      <div class="action-row"><span class="action-label">Outreach angle</span><span class="action-value">대시보드를 수동 제작하는 고객에게 "Dashboard Agent 데모 30분" 소규모 미팅 제안.</span></div>
+      <div class="action-row"><span class="action-label">Decision</span><span class="action-value"><span class="verdict-act">✅ Act</span> — MXP 2026 키노트 영상 확인 후 데모 스크립트화. OCEO 세일즈 콘텐츠로 즉시 가공.</span></div>
+    </div>
+  </div>
+
+  <!-- SIGNAL 2 -->
+  <div class="signal-card">
+    <span class="signal-num">#2</span>
+    <div class="signal-title">AppsFlyer MCP + Claude — "AI 에이전트가 실시간 Attribution 데이터를 직접 쿼리하는 시대"</div>
+    <div class="signal-meta">
+      <span class="badge badge-company">AppsFlyer</span>
+      <span class="badge badge-ai">AI agent / MCP</span>
+      <span class="badge badge-comp">competitive positioning</span>
+      <span class="badge badge-persona">data_analytics · exec_cmo · growth_crm</span>
+    </div>
+    <div class="signal-link">🔗 <a href="https://www.appsflyer.com/blog/measurement-analytics/mcp-agent-ai-workflows/" target="_blank">appsflyer.com/blog/measurement-analytics/mcp-agent-ai-workflows/</a></div>
+    <div class="signal-body">
+      <p>AppsFlyer가 <strong>MCP를 통해 Claude와 AppsFlyer를 직접 연결</strong>하는 실사례를 공개 블로그로 발표. 핵심 메시지: <em>"많은 마케터가 CSV를 export해서 Claude에 올린다. 이건 AI 분석이 아니다. 채팅 인터페이스를 얹은 피벗 테이블이다."</em></p>
+      <p><strong>활용 사례:</strong> Gaming UA팀 — 10개 클라이언트 주간 보고 자동화 + 예산 이상 감지 / Finance팀 — 멀티아워 attribution 분석을 2분 대화로 압축 / E-commerce팀 — 성과 측정과 spend 의사결정 갭 해소.</p>
+      <p><strong>핵심 위협:</strong> AppsFlyer가 Attribution 도구를 넘어 <strong>"AI 분석 인터페이스"로 포지셔닝 이동 중</strong>. "AppsFlyer도 AI로 분석하는데 왜 Mixpanel이 필요하냐"는 질문 대응 포인트 선제 준비 필요.</p>
+    </div>
+    <div class="action-grid">
+      <h4>👩‍💼 SY님이 어떻게 써먹을까</h4>
+      <div class="action-row"><span class="action-label">Sales talk track</span><span class="action-value">"Attribution은 어디서 왔는지, Mixpanel은 와서 어떻게 사는지 — 두 도구는 레이어가 다릅니다." 공존 포지셔닝.</span></div>
+      <div class="action-row"><span class="action-label">Proposal update</span><span class="action-value">AppsFlyer + Mixpanel integration 슬라이드 추가. "대체가 아닌 레이어 분리" 메시지.</span></div>
+      <div class="action-row"><span class="action-label">Outreach angle</span><span class="action-value">AppsFlyer 현 사용 고객에게 "Attribution 이후 행동 분석 연결 솔루션"으로 Mixpanel 포지셔닝해 접근.</span></div>
+      <div class="action-row"><span class="action-label">Decision</span><span class="action-value"><span class="verdict-act">✅ Act</span> — AppsFlyer MCP 기능 파악 후 Mixpanel MCP와 비교 포인트 정리. 고객 미팅 전 반드시 확인.</span></div>
+    </div>
+  </div>
+
+  <!-- SIGNAL 3 -->
+  <div class="signal-card">
+    <span class="signal-num">#3</span>
+    <div class="signal-title">Amplitude — Agentic AI Analytics Suite 전체 구성 확인 (2026 상반기 전면 업데이트)</div>
+    <div class="signal-meta">
+      <span class="badge badge-company">Amplitude</span>
+      <span class="badge badge-ai">agentic analytics</span>
+      <span class="badge badge-ai">AI positioning</span>
+      <span class="badge badge-persona">product_pm · data_analytics</span>
+    </div>
+    <div class="signal-link">🔗 <a href="https://amplitude.com/press/amplitude-introduces-agentic-ai-analytics-for-the-next-era-of-product-experiences" target="_blank">amplitude.com/press/amplitude-introduces-agentic-ai-analytics</a></div>
+    <div class="signal-body">
+      <p>지난 주 Wave 단독 발표에 이어, 이번 주 Agentic AI Analytics Suite 전체 구성 확인 (February~April 2026).</p>
+      <p><strong>구성 요소:</strong> Global Agent (자연어 질문→대시보드→근본 원인→다음 단계) / 4개 전문 Agent (Dashboard Monitor / Session Reviewer / Experiment Runner / Feedback Processor) / <strong>AI Visibility 1.5</strong> — ChatGPT·Perplexity·Gemini·Claude 등 AI 검색 트래픽을 Amplitude Analytics에 연결 / <strong>Amplitude AI Assistant</strong> (April 2026) — in-product 임베디드 지원 에이전트 / <strong>MCP</strong> (Jan 2026) — AI 도구에서 Amplitude 차트 직접 조회.</p>
+      <p><strong>핵심 의미:</strong> Amplitude가 "분석 플랫폼"에서 "Agentic Product Operating System"으로 완전 포지셔닝 이동. 단, 기능 수 ≠ 도입 용이성 — Mixpanel의 단순성/자유도 대비 포인트 여전히 유효.</p>
+    </div>
+    <div class="action-grid">
+      <h4>👩‍💼 SY님이 어떻게 써먹을까</h4>
+      <div class="action-row"><span class="action-label">Sales talk track</span><span class="action-value">"Amplitude는 AI 기능이 많지만 배워야 할 곡선이 가파릅니다. Mixpanel은 익숙한 인터페이스에 AI를 통합해 진입 장벽이 낮습니다."</span></div>
+      <div class="action-row"><span class="action-label">Proposal update</span><span class="action-value">Amplitude vs Mixpanel 비교 슬라이드 대폭 업데이트. "기능 수"가 아닌 "도입 속도"와 "팀 자립도"로 비교 축 재설정.</span></div>
+      <div class="action-row"><span class="action-label">Outreach angle</span><span class="action-value">Amplitude 평가 중인 고객에게 "두 가지 데모 후 비교 판단" 제안. 직접 대면 비교 전략.</span></div>
+      <div class="action-row"><span class="action-label">Decision</span><span class="action-value"><span class="verdict-watch">👀 Watch</span> — AI Visibility 기능은 AI 검색 전략을 고민하는 고객에 흥미로운 어필 포인트. 단독 제안 가능 여부 탐색.</span></div>
+    </div>
+  </div>
+
+  <!-- SIGNAL 4 -->
+  <div class="signal-card">
+    <span class="signal-num">#4</span>
+    <div class="signal-title">MoEngage — $100M 펀딩 (Goldman Sachs 주도) + Gartner Customers' Choice 2026 더블 수상</div>
+    <div class="signal-meta">
+      <span class="badge badge-company">MoEngage</span>
+      <span class="badge badge-funding">$100M funding</span>
+      <span class="badge badge-research">Gartner recognition</span>
+      <span class="badge badge-persona">growth_crm · exec_cmo</span>
+    </div>
+    <div class="signal-link">🔗 <a href="https://www.moengage.com/blog/moengage-funding-100-million/" target="_blank">moengage.com/blog/moengage-funding-100-million/</a></div>
+    <div class="signal-body">
+      <p><strong>① $100M 펀딩</strong> — Goldman Sachs Alternatives + A91 Partners 주도. 1,350+ 글로벌 고객 (레거시 마케팅 클라우드 대체 다수). 자금 사용: Merlin AI 플랫폼 가속 + 글로벌 확장.</p>
+      <p><strong>② Gartner Peer Insights Customers' Choice 2026 더블 수상</strong> — Email Marketing Report 2026 (Only Vendor) + Multichannel Marketing Hubs 2026. 이 두 카테고리 동시 수상은 Braze도 달성하지 못한 것.</p>
+      <p><strong>핵심 의미:</strong> MoEngage가 자금력 + 시장 인증 + AI(Merlin) 세 트랙 동시 확보. SY님이 MoEngage를 파트너로 판매 시, Gartner Only Vendor 타이틀이 고객 미팅의 결정적 신뢰 포인트.</p>
+    </div>
+    <div class="action-grid">
+      <h4>👩‍💼 SY님이 어떻게 써먹을까</h4>
+      <div class="action-row"><span class="action-label">Sales talk track</span><span class="action-value">"MoEngage는 이번에 Gartner Email Marketing에서 유일한 Customers' Choice 수상했어요. 글로벌 마케터들의 실제 평가입니다."</span></div>
+      <div class="action-row"><span class="action-label">Proposal update</span><span class="action-value">MoEngage 제안서 첫 페이지에 "Gartner Customers' Choice 2026 — Only Vendor in Email Marketing" + "$100M 투자" 두 뱃지 즉시 추가.</span></div>
+      <div class="action-row"><span class="action-label">Outreach angle</span><span class="action-value">Braze 현 고객에게 "비용 효율 + Gartner 인증" 기준으로 비교 제안.</span></div>
+      <div class="action-row"><span class="action-label">Decision</span><span class="action-value"><span class="verdict-act">✅ Act</span> — 수상 자료와 펀딩 뉴스 즉시 세일즈 덱에 반영. Braze 직접 경쟁 딜에 바로 투입.</span></div>
+    </div>
+  </div>
+
+  <!-- SIGNAL 5 -->
+  <div class="signal-card">
+    <span class="signal-num">#5</span>
+    <div class="signal-title">MoEngage 2026 Customer Engagement Benchmarks — "개인화 전환 리프트 37.6x"</div>
+    <div class="signal-meta">
+      <span class="badge badge-company">MoEngage</span>
+      <span class="badge badge-research">benchmark</span>
+      <span class="badge badge-market">data-driven sales enablement</span>
+      <span class="badge badge-persona">growth_crm · exec_cmo</span>
+    </div>
+    <div class="signal-link">🔗 <a href="https://www.moengage.com/blog/channel-benchmarks/" target="_blank">moengage.com/blog/channel-benchmarks/</a></div>
+    <div class="signal-body">
+      <p>MoEngage + Movable Ink + Tealium 공동 발표. 데이터: <strong>40억 개 메시지 분석</strong> (2024.11~2025.11) + B2C 마케터 651명 설문.</p>
+      <p><strong>핵심 수치:</strong> 개인화 메시지 전환 리프트 — <strong>2024년 2.4x → 2026년 37.6x</strong> (15배 이상 상승). "개인화하지 않으면 잠재 매출의 97%를 놓친다." Personalization Multiplier is Exploding.</p>
+      <p><strong>핵심 의미:</strong> Braze의 Trust Plateau 리포트와 함께 사용하면 "왜 지금 CRM/개인화 투자가 필요한가"에 대한 완전한 외부 근거 확보. 세일즈 대화에서 즉시 활용 가능한 강력한 데이터 포인트.</p>
+    </div>
+    <div class="action-grid">
+      <h4>👩‍💼 SY님이 어떻게 써먹을까</h4>
+      <div class="action-row"><span class="action-label">Sales talk track</span><span class="action-value">"2026년 개인화 메시지 전환율은 일반 메시지의 37배입니다. 그냥 보내는 캠페인과 행동 기반 개인화 캠페인의 격차가 이렇습니다."</span></div>
+      <div class="action-row"><span class="action-label">Proposal update</span><span class="action-value">제안서 Why Now 섹션에 37.6x 수치 인용. 각주에 출처(MoEngage 2026 Benchmarks, 40B messages) 명시.</span></div>
+      <div class="action-row"><span class="action-label">Outreach angle</span><span class="action-value">세그먼트 발송만 하는 고객에게 "37.6배 격차" 수치로 어텐션 확보 후 MoEngage/Mixpanel 조합 제안.</span></div>
+      <div class="action-row"><span class="action-label">Decision</span><span class="action-value"><span class="verdict-act">✅ Act</span> — 리포트 다운로드 후 한국 고객용 요약 1페이지 제작. Braze Trust Plateau와 묶어 "2026 CRM 인사이트" 패키지 구성.</span></div>
+    </div>
+  </div>
+
+  <!-- SALES BACKLOG -->
+  <div class="section-title">📋 Sales Backlog Candidates</div>
+
+  <div class="backlog-card">
+    <h4>[BACKLOG-1] Mixpanel AI 데모 세션 구성</h4>
+    <div class="backlog-row"><strong>Action:</strong> Mixpanel AI (Always-On + Dashboard Agent + Verified Mode) 데모 스크립트 작성 → 고객 미팅 1개 시범 적용</div>
+    <div class="backlog-row"><strong>Timeline:</strong> 이번 주 내</div>
+    <div class="backlog-row"><strong>Persona:</strong> PM/마케터가 자체 분석을 원하는 고객사</div>
+    <div class="backlog-row"><strong>Priority:</strong> <span class="priority-high">High</span></div>
+  </div>
+
+  <div class="backlog-card">
+    <h4>[BACKLOG-2] MoEngage Gartner Customers' Choice 세일즈 자료 업데이트</h4>
+    <div class="backlog-row"><strong>Action:</strong> MoEngage 제안서 첫 페이지에 Gartner 2026 더블 수상 + $100M 펀딩 뱃지 추가</div>
+    <div class="backlog-row"><strong>Timeline:</strong> 이번 주 내</div>
+    <div class="backlog-row"><strong>Persona:</strong> Braze vs MoEngage 비교 검토 중인 고객</div>
+    <div class="backlog-row"><strong>Priority:</strong> <span class="priority-high">High</span></div>
+  </div>
+
+  <div class="backlog-card">
+    <h4>[BACKLOG-3] "37.6x 개인화 리프트" 한국어 요약 1-page 제작</h4>
+    <div class="backlog-row"><strong>Action:</strong> MoEngage 2026 Benchmarks 핵심 수치(37.6x + 채널별 벤치마크) 한국 고객용 1페이지 재가공</div>
+    <div class="backlog-row"><strong>Timeline:</strong> 다음 주까지</div>
+    <div class="backlog-row"><strong>Persona:</strong> growth_crm, exec_cmo</div>
+    <div class="backlog-row"><strong>Priority:</strong> <span class="priority-med">Medium</span></div>
+  </div>
+
+  <!-- CAVEATS -->
+  <div class="section-title">⚠️ Caveats & 다음 개선 항목</div>
+  <div class="backlog-card" style="border-left-color: #d97706;">
+    <h4>운영 이슈 및 개선 계획</h4>
+    <div class="backlog-row"><strong>Apify 메모리 한도:</strong> 7개 Actor 동시 실행으로 8192MB 한도 도달. 해결: ① 순차 실행 (배치 간 대기 추가) — 무료 플랜 유지 시 / ② 유료 플랜 업그레이드 검토</div>
+    <div class="backlog-row"><strong>YouTube/Instagram:</strong> 전용 Actor 미설정. 다음 단계 과제로 유지.</div>
+    <div class="backlog-row"><strong>VWO / Airbridge:</strong> 이번 주 수집 미흡. 다음 주 별도 쿼리 재시도 예정.</div>
+  </div>
+
+  <div class="footer">
+    Generated by OCEO Intelligence (크롱) · 2026-06-22 · <a href="../index.html">← Back to Index</a><br>
+    Public source synthesis only. No raw datasets, tokens, or private data included.
+  </div>
+
+</div>
+</body>
+</html>
