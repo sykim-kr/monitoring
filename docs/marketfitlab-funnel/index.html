@@ -14,8 +14,9 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
     .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 24px; }
-    .latest { background: #eef2ff; border-left: 5px solid #4f46e5; padding: 12px 16px; margin: 16px 0; border-radius: 6px; }
+    .latest { background: #e8f4fb; border-left: 5px solid #1976D2; padding: 12px 16px; margin: 16px 0; border-radius: 6px; }
     .back { font-size: 0.85rem; }
+    code { background:#f3f4f6; border-radius:4px; padding:1px 5px; }
   </style>
 </head>
 <body>
@@ -32,12 +33,15 @@
 </p>
 
 <div class="latest">
-  최신 리포트: <a href="2026-06-22/index.html"><strong>주간 Funnel + 폼이탈 Report — 2026-06-22</strong></a>
-  <span style="color:#6b7280;"> (분석 기간: 2026-06-15 ~ 2026-06-21, 데모 제출 0건 · form_solutions 이탈 60%)</span>
+  최신 리포트: <a href="2026-06-29/index.html"><strong>주간 Funnel + 폼이탈 Report — 2026-06-29</strong></a>
+  <span style="color:#6b7280;"> (분석 기간: 2026-06-22 ~ 2026-06-28, CTA 46회 회복 · 데모 제출 0건)</span>
 </div>
 
 <h2>리포트 히스토리</h2>
 <ul>
+  <li><a href="2026-06-29/index.html">2026-06-29</a> · 분석 기간 2026-06-22 ~ 2026-06-28 · <strong>폼이탈 포함</strong>
+    <span style="color:#6b7280;"> — 방문 1,853 → 블로그 821 (44.3%) → CTA 46 → 폼시작 5 → 제출 0 (폼완료율 0%)</span>
+  </li>
   <li><a href="2026-06-22/index.html">2026-06-22</a> · 분석 기간 2026-06-15 ~ 2026-06-21 · <strong>폼이탈 포함</strong>
     <span style="color:#6b7280;"> — 방문 1,678 → 블로그 702 (41.8%) → CTA 35 → 폼시작 5 → 제출 0 (폼완료율 0%)</span>
   </li>
@@ -51,10 +55,9 @@
 
 <h2>분석 정의</h2>
 <ul>
-  <li><strong>Primary Funnel</strong>: 방문(<code>$mp_web_page_view</code>) → 블로그 조회(<code>view_blog_page</code>) → 데모 요청 제출(<code>submit_demo_request</code>)</li>
-  <li><strong>보조 Funnel</strong>: 데모 클릭(<code>click_to_demo_request</code>) → 데모 제출(<code>submit_demo_request</code>)</li>
-  <li><strong>Surrounding events</strong>: <code>articul8_click_demo_request</code>, <code>click_general_button</code>, <code>click_to_growth_consulting_request</code>, <code>submit_growth_consulting_request</code></li>
-  <li><strong>폼 행동 (GTM 2026-06-01 적용)</strong>: <code>start_demo_request</code> / <code>abandon_demo_request</code> / <code>error_demo_request</code> / <code>submit_demo_request</code> — last_field_touched·fields_filled_count·time_on_form_sec 속성 활용</li>
+  <li><strong>Primary Funnel</strong>: 방문(<code>$mp_web_page_view</code>) → 블로그 조회(<code>view_blog_page</code>) → 데모 CTA(<code>click_to_demo_request</code> + <code>articul8_click_demo_request</code>) → 폼 시작(<code>start_demo_request</code>) → 데모 제출(<code>submit_demo_request</code>)</li>
+  <li><strong>보조 Funnel</strong>: 성장컨설팅 클릭(<code>click_to_growth_consulting_request</code>) → 성장컨설팅 제출(<code>submit_growth_consulting_request</code>)</li>
+  <li><strong>폼 행동</strong>: <code>start_demo_request</code> / <code>abandon_demo_request</code> / <code>error_demo_request</code> / <code>submit_demo_request</code> — last_field_touched·fields_filled_count·time_on_form_sec 속성 활용</li>
 </ul>
 
 <h2>운영 원칙</h2>
