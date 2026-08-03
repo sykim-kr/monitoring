@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarketFit Lab Funnel Report 2026-08-03</title>
+  <style>
+    :root{--primary:#1976D2;--alert:#D84315;--light:#E8F4FB;--text:#222222;--secondary:#888888;--border:#E0E0E0;--ok:#2E7D32;--soft:#F7FAFD;}
+    *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--text);font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}.hero{background:var(--primary);color:#fff;padding:32px 0}.hero h1{margin:0 0 8px;font-size:28px;line-height:1.35}.meta{color:rgba(255,255,255,.85);font-size:13px}.headline{background:var(--light);border-bottom:1px solid var(--border);padding:22px 0}.headline h2{margin:0;color:var(--alert);font-size:24px;line-height:1.38}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.grid{grid-template-columns:1fr}.hero h1{font-size:23px}.headline h2{font-size:20px}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:17px;background:#fff}.card.blue{background:var(--light)}.label{font-size:12px;color:var(--secondary);font-weight:800;letter-spacing:.02em}.value{font-size:30px;font-weight:900;margin:4px 0}.sub{font-size:13px;color:var(--secondary)} h2.section{font-size:20px;margin:34px 0 12px;border-bottom:2px solid var(--border);padding-bottom:8px}.note{background:var(--light);border-left:5px solid var(--primary);border-radius:8px;padding:14px 16px;margin:14px 0}.alert{background:#FBE9E7;border-left:5px solid var(--alert);border-radius:8px;padding:14px 16px;margin:14px 0}.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--border);padding:10px 12px;text-align:left}th{background:var(--soft)}td.num,th.num{text-align:right;white-space:nowrap}.down{color:var(--alert);font-weight:800}.up{color:var(--ok);font-weight:800}.flat{color:var(--secondary);font-weight:800}.pill{display:inline-block;border-radius:999px;padding:2px 9px;background:var(--light);color:var(--primary);font-weight:800;font-size:12px}.mask{font-weight:900;color:var(--alert)}footer{margin:42px 0;color:var(--secondary);font-size:13px}.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}.step{border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff}.step b{display:block;font-size:22px}.step span{font-size:12px;color:var(--secondary)}@media(max-width:860px){.funnel{grid-template-columns:1fr 1fr}}@media(max-width:540px){.funnel{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="hero"><div class="wrap">
+    <h1>MarketFit Lab Weekly Funnel + Demo Form Abandonment Report</h1>
+    <div class="meta">분석 기간: 2026-07-27 ~ 2026-08-02 (Asia/Seoul 기준) · 발행일: 2026-08-03 · Source: aggregated product analytics events</div>
+  </div></section>
+
+  <section class="headline"><div class="wrap">
+    <h2>So What: 방문 감소보다 더 큰 이슈는 CTA 품질이다. 블로그 소비는 유지됐지만 데모 CTA가 전주 대비 66% 줄어 폼 진입 모수가 너무 얇아졌다.</h2>
+  </div></section>
+
+  <main class="wrap">
+    <div class="grid">
+      <div class="card blue"><div class="label">VISITS / PAGE VIEWS</div><div class="value">1,919</div><div class="sub">전주 2,064 대비 <span class="down">-7.0%</span></div></div>
+      <div class="card"><div class="label">BLOG VIEW RATE</div><div class="value">37.4%</div><div class="sub">717 / 1,919 · 전주 40.5% 대비 -3.1%p</div></div>
+      <div class="card"><div class="label">CTA CLICKS</div><div class="value">15</div><div class="sub">demo 10 + Articul8 5 · 전주 44 대비 <span class="down">-65.9%</span></div></div>
+      <div class="card"><div class="label">DEMO SUBMIT</div><div class="value mask">&lt;5</div><div class="sub">공개본 소표본 마스킹</div></div>
+    </div>
+
+    <h2 class="section">Week-over-week comparison</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Metric</th><th class="num">Prior 2026-07-20~07-26</th><th class="num">Current 2026-07-27~08-02</th><th class="num">Change</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Page views / visits proxy</td><td class="num">2,064</td><td class="num">1,919</td><td class="num down">-7.0%</td><td>유입 감소는 경미한 주의 신호.</td></tr>
+        <tr><td>Blog views</td><td class="num">835</td><td class="num">717</td><td class="num down">-14.1%</td><td>블로그 소비율도 40.5% → 37.4%로 하락.</td></tr>
+        <tr><td>Total demo CTA clicks</td><td class="num">44</td><td class="num">15</td><td class="num down">-65.9%</td><td>이번 주 핵심 병목. 콘텐츠에서 데모 의향으로 넘어가는 연결이 약해졌다.</td></tr>
+        <tr><td>Demo form starts</td><td class="num">전주 수치 자동 추출 제한</td><td class="num mask">&lt;5</td><td class="num">확인 필요</td><td>소표본이라 증감 단정 금지.</td></tr>
+        <tr><td>Demo submissions</td><td class="num">전주 수치 자동 추출 제한</td><td class="num mask">&lt;5</td><td class="num">확인 필요</td><td>공개본은 소표본 마스킹.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="section">Primary funnel and drop-off</h2>
+    <div class="funnel">
+      <div class="step"><span>Page views</span><b>1,919</b><small>100%</small></div>
+      <div class="step"><span>Blog views</span><b>717</b><small>37.4% of page views</small></div>
+      <div class="step"><span>Demo CTA clicks</span><b>15</b><small>2.1% of blog views</small></div>
+      <div class="step"><span>Form starts</span><b class="mask">&lt;5</b><small>small sample masked</small></div>
+      <div class="step"><span>Submits</span><b class="mask">&lt;5</b><small>small sample masked</small></div>
+    </div>
+    <div class="alert"><b>폼 이탈 진단:</b> 폼 단계 표본이 작고 단계 간 이벤트 정합성 이슈가 있어 공개본에서는 세부 수치와 비율을 마스킹한다. 같은 사용자·세션의 중복 이벤트, 이전 시작 후 이탈, 또는 이벤트 발화 순서 차이가 섞였을 가능성이 있어 “이탈률 악화”로 단정하지 않고 내부 tracking QA 대상으로 본다.</div>
+
+    <h2 class="section">Daily table</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th class="num">Page views</th><th class="num">Blog views</th><th class="num">CTA total</th><th class="num">Form stage detail</th></tr></thead>
+      <tbody>
+        <tr><td>2026-07-27</td><td class="num">286</td><td class="num">121</td><td class="num">4</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-07-28</td><td class="num">272</td><td class="num">143</td><td class="num">1</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-07-29</td><td class="num">242</td><td class="num">122</td><td class="num">1</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-07-30</td><td class="num">391</td><td class="num">135</td><td class="num">2</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-07-31</td><td class="num">347</td><td class="num">103</td><td class="num">2</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-01</td><td class="num">216</td><td class="num">57</td><td class="num">0</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-02</td><td class="num">165</td><td class="num">36</td><td class="num">5</td><td class="num mask">masked</td></tr>
+      </tbody>
+      <tfoot><tr><th>Total</th><th class="num">1,919</th><th class="num">717</th><th class="num">15</th><th class="num mask">masked</th></tr></tfoot>
+    </table></div>
+
+    <h2 class="section">Recommended actions</h2>
+    <div class="note"><span class="pill">P0</span> 블로그 하단과 중간 CTA 문구를 “데모 요청”보다 낮은 심리적 진입 장벽의 제안으로 A/B 테스트한다. 예: “MarketFit 진단 15분 받아보기”, “현재 퍼널 병목 확인하기”. 성공 지표는 CTA click/blog view와 start/CTA.</div>
+    <div class="note"><span class="pill">P1</span> Articul8 CTA가 2026-08-02에 4건으로 몰렸으므로 해당 유입/콘텐츠 조합을 확인해 CTA placement를 복제 후보로 분리한다. 단, 소표본이라 확정하지 않는다.</div>
+    <div class="note"><span class="pill">P2</span> 폼 단계 이벤트 정합성 점검이 필요하다. 이벤트 발화 조건, 중복 전송, 세션 타임아웃 후 이탈 이벤트 처리, validation error와 abandon의 관계를 내부 QA한다.</div>
+
+    <h2 class="section">Validation & Caveats</h2>
+    <ul>
+      <li>Read-only 집계 분석이다. 개인 식별 데이터와 개별 사용자 레코드는 포함하지 않았다.</li>
+      <li>GA4는 numeric propertyId/권한이 확정되지 않아 사용하지 않았다. not used: propertyId/permission not confirmed.</li>
+      <li>BigQuery는 MarketFit Lab 관련 테이블을 이번 bounded job 범위에서 추가 조회하지 않았다.</li>
+      <li>폼 단계는 주간 표본이 5건 미만 또는 매우 작아 공개본에서 마스킹했다. 폼 제출/이탈 원인은 가설이며, 이벤트 QA 전 단정 금지.</li>
+      <li>전주 리포트에서 방문, 블로그, CTA는 index에서 자동 추출 가능했으나 폼시작/제출 수치는 공개 마스킹 정책 때문에 자동 추출 제한으로 표기했다.</li>
+    </ul>
+
+    <h2 class="section">Previous report</h2>
+    <p><a href="../2026-07-27/index.html">지난 리포트: 2026-07-27 MarketFit Lab Funnel Report</a></p>
+    <footer>Prepared by 또롱이, OCEO Analytics / Product Insight Agent. Public-safe static report.</footer>
+  </main>
+</body>
+</html>
