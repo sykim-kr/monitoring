@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Partner Intelligence - 2026-08-10</title>
+  <style>
+:root { color-scheme: dark; }
+body { margin:0; background:#0f1117; color:#e5e7eb; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.72; }
+main { max-width: 980px; margin: 0 auto; padding: 44px 22px 80px; }
+a { color:#a78bfa; word-break: break-word; }
+h1 { font-size: 30px; margin: 0 0 20px; letter-spacing:-0.02em; }
+h2 { margin-top: 44px; padding-top: 20px; border-top:1px solid #283044; color:#f8fafc; }
+h3 { margin-top: 34px; color:#c4b5fd; }
+h4 { margin-top: 22px; color:#93c5fd; }
+p, li { font-size: 15.5px; }
+blockquote { margin: 20px 0 28px; padding: 14px 18px; border-left: 4px solid #6d5dfc; background:#171a25; color:#cbd5e1; }
+hr { border:0; border-top:1px solid #283044; margin:34px 0; }
+code { background:#1f2937; padding:2px 5px; border-radius:5px; }
+pre { background:#111827; padding:16px; overflow:auto; border-radius:10px; white-space:pre-wrap; }
+strong { color:#fff; }
+.nav { margin-bottom: 26px; }
+.nav a { text-decoration:none; color:#c4b5fd; font-size:14px; }
+.card { background:#111827; border:1px solid #243044; border-radius:16px; padding:28px; box-shadow:0 16px 40px rgba(0,0,0,.28); }
+</style>
+</head>
+<body>
+<main>
+  <div class="nav"><a href="index.html">← Partner Intelligence 목록</a> · <a href="../index.html">전체 리포트</a></div>
+  <div class="card">
+  <h1>Weekly Partner Intelligence - 2026-08-10</h1>
+<blockquote>수집 기간: 2026-08-03 ~ 2026-08-10 | 대상: Mixpanel, Amplitude, Braze, MoEngage, AppsFlyer, Airbridge/AB180, VWO<br/><br/>운영 원칙: 공개 official-domain 중심 수집. proactive personal curation 미실행. Raw JSON은 로컬 workspace에만 저장.<br/><br/>수집 caveat: Apify RAG Web Browser는 Mixpanel, Amplitude, Airbridge/AB180, VWO에서 결과를 반환했고 Braze, MoEngage, AppsFlyer 쿼리는 HTTP 500이 발생했다. 보강을 위해 official domain, sitemap, public page 직접 수집을 병행했다. YouTube/Instagram 전용 Actor는 schema/비용 불확실성 때문에 실행하지 않았다.</blockquote>
+<h2>Top 5</h2>
+<h3>1. Mixpanel이 Experiments와 feature flagging 메시지를 강화 - “배포 안정성”보다 “제품 임팩트 측정”으로 포지셔닝</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/blog/canary-deployment/">https://mixpanel.com/blog/canary-deployment/</a> / <a href="https://mixpanel.com/blog/experimentation-build-vs-buy/">https://mixpanel.com/blog/experimentation-build-vs-buy/</a> / <a href="https://mixpanel.com/blog/feature-flag-cleanup/">https://mixpanel.com/blog/feature-flag-cleanup/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Experimentation / feature flagging / product impact measurement / build-vs-buy</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG가 이번 주 Mixpanel 공식 블로그에서 <code>Canary deployment: how to measure product impact, not just uptime</code>, <code>Experimentation’s build-vs-buy debate is asking the wrong question</code>, <code>Feature flag cleanup</code>을 동시에 포착했다. 공개 metadata 기준 Mixpanel은 Experiments를 end-to-end experimentation suite로 설명하며, 기능을 flag 뒤에서 배포하고 사용자 행동 분석과 연결하는 workflow를 강조한다.</p>
+<p>이는 Mixpanel의 AI Agent 메시지 다음 축이 <strong>실험 실행과 제품 분석의 결합</strong>이라는 신호다. 단순 A/B testing tool과 경쟁하기보다, release, cohort, metric tree, retention impact를 한 화면에서 보는 product decision layer로 말해야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “실험은 버튼 색깔 테스트가 아니라, 배포한 기능이 어떤 고객 행동과 retention impact를 만들었는지 검증하는 운영 체계입니다.”</li>
+<li><strong>Proposal/deck update:</strong> <code>Feature release → flag exposure → cohort impact → retention/business metric</code> 1장 추가.</li>
+<li><strong>Customer outreach angle:</strong> feature flag, A/B testing, canary deployment를 이미 운영하지만 business impact 연결이 약한 PM/데이터팀에게 진단 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - PM persona와 experimentation objection card에 즉시 반영.</li>
+</ul>
+<hr/>
+<h3>2. Mixpanel Clip fintech customer story가 신규 노출 - “전통 funnel이 놓치는 행동 nuance”를 금융 vertical proof로 활용 가능</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/customers/how-clip-made-mixpanel-the-starting-point-for-every-product-decision/">https://mixpanel.com/customers/how-clip-made-mixpanel-the-starting-point-for-every-product-decision/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Customer story / fintech / behavioral nuance / product decision workflow</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG가 <code>How Clip Made Mixpanel the Starting Point for Every Product Decision</code> customer story를 2일 전 신호로 포착했다. 공개 설명은 Mixpanel이 전통적인 funnel이 놓치는 행동 nuance를 잡았고, 같은 단계 완료라도 30초와 훨씬 긴 소요 시간 같은 차이가 의미 있다는 점을 강조한다.</p>
+<p>금융/핀테크에서는 가입, 본인인증, 결제, 송금, 충전 같은 단계가 “완료율”만으로는 충분하지 않다. 소요 시간, 반복 시도, support event, 재방문, segment별 마찰을 같이 봐야 한다. 이 사례는 fintech deck에서 Mixpanel을 “대시보드”가 아니라 제품 의사결정의 시작점으로 설명하는 proof로 쓸 수 있다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “금융 funnel은 완료율보다 마찰의 모양이 중요합니다. Mixpanel은 어느 segment가 어디서 오래 걸리고, 어떤 행동이 다음 전환을 막는지까지 봅니다.”</li>
+<li><strong>Proposal/deck update:</strong> fintech use case에 <code>completion rate + time-to-complete + retry/error + retention cohort</code> metric set 추가.</li>
+<li><strong>Customer outreach angle:</strong> 핀테크, 결제, 금융앱 고객에게 onboarding friction audit 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - vertical proof로 저장.</li>
+</ul>
+<hr/>
+<h3>3. Airbridge AI가 4개월 사용 데이터 공개 - 820개 브랜드, 16,610개 질문, MCP 연결 800명 이상</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://www.airbridge.io/en/blog/airbridge-ai-usage-record-data">https://www.airbridge.io/en/blog/airbridge-ai-usage-record-data</a></li>
+<li><strong>Company:</strong> Airbridge / AB180</li>
+<li><strong>Signal tag:</strong> AI marketing assistant / MCP / measurement operations / implementation support</li>
+<li><strong>Persona affected:</strong> data_analytics, growth_crm, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Airbridge는 <code>4 Months of Airbridge AI: How 820 Brands Actually Used It</code>에서 4개월 동안 820개 브랜드가 16,610개 질문을 했고, event taxonomy, SDK, reporting 같은 구현·운영 질문이 분석 질문보다 많았다고 공개했다. 또한 800명 이상이 Airbridge를 MCP로 자신의 AI에 연결했다는 신호도 포함됐다.</p>
+<p>이건 국내 인접 솔루션에서 AI가 “insight generation”보다 <strong>설정, 계측, 운영 support</strong>로 먼저 채택된다는 중요한 증거다. Mixpanel 제안에서도 AI를 멋진 analyst로만 말하면 약하다. 이벤트 설계, governance, taxonomy, tracking QA, self-serve onboarding을 함께 팔아야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI analytics 도입의 병목은 답변 생성이 아니라, 질문 가능한 이벤트 체계와 운영 품질입니다. 그래서 taxonomy와 governance가 먼저입니다.”</li>
+<li><strong>Proposal/deck update:</strong> <code>AI analytics readiness: event taxonomy, SDK QA, metric governance, MCP/agent usage policy</code> 섹션 추가.</li>
+<li><strong>Customer outreach angle:</strong> Airbridge/Appsflyer/GA4를 쓰지만 이벤트 운영 질문이 많은 팀에게 Mixpanel implementation quality workshop 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - AI readiness 패키지에 반영.</li>
+</ul>
+<hr/>
+<h3>4. VWO/Wingify가 AI personalization과 connected optimization suite를 집중 노출 - CRO가 “실험 도구”에서 “실시간 개인화 운영체계”로 이동</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://vwo.com/blog/adaptivecx-real-time-ai-personalization/">https://vwo.com/blog/adaptivecx-real-time-ai-personalization/</a> / <a href="https://vwo.com/blog/wingifys-unified-suite/">https://vwo.com/blog/wingifys-unified-suite/</a> / <a href="https://vwo.com/blog/wandz-ai-layer/">https://vwo.com/blog/wandz-ai-layer/</a> / <a href="https://vwo.com/blog/adaptive-ecommerce-personalization/">https://vwo.com/blog/adaptive-ecommerce-personalization/</a></li>
+<li><strong>Company:</strong> VWO / Wingify / AB Tasty</li>
+<li><strong>Signal tag:</strong> AI personalization / optimization suite / experimentation / conversion-retention link</li>
+<li><strong>Persona affected:</strong> growth_crm, product_pm, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG는 VWO에서 <code>Real-time AI personalization with AdaptiveCX</code>, <code>Wingify unifies optimization into one connected suite</code>, <code>Meet Wandz the Embedded AI Layer</code>, <code>Adaptive eCommerce Personalization</code>을 포착했다. 공개 metadata는 실시간 행동 신호와 AI로 visitor별 경험을 개인화하고 conversion, revenue, retention, engagement를 개선한다는 메시지다. Wingify suite는 customer insight와 business impact 사이의 gap을 닫는 connected platform으로 포지셔닝한다.</p>
+<p>이는 CRO/experimentation vendor들이 더 이상 “테스트 실행”만 말하지 않는다는 신호다. Mixpanel은 이들과 경쟁하기보다, 개인화·실험이 만든 행동 변화와 long-term retention impact를 검증하는 analytics layer로 포지셔닝해야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI 개인화와 실험이 늘수록, 어떤 경험이 단기 conversion이 아니라 장기 retention과 LTV를 만들었는지 별도 검증이 필요합니다.”</li>
+<li><strong>Proposal/deck update:</strong> <code>Experiment/personalization execution layer ↔ Mixpanel behavioral impact layer</code> objection slide 추가.</li>
+<li><strong>Customer outreach angle:</strong> VWO, AB Tasty, Optimizely, 자체 실험 툴을 쓰는 이커머스·콘텐츠 고객에게 personalization impact measurement 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - CRO adjacent 경쟁 대응에 반영.</li>
+</ul>
+<hr/>
+<h3>5. Braze가 AI Decisioning product team, agents guide, privacy/deliverability 콘텐츠를 동시 노출 - CRM AI는 “에이전트+컴플라이언스+전달률” 묶음으로 진화</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/how-product-teams-build-braze">https://www.braze.com/resources/articles/how-product-teams-build-braze</a> / <a href="https://www.braze.com/resources/reports-and-guides/marketers-guide-to-agents">https://www.braze.com/resources/reports-and-guides/marketers-guide-to-agents</a> / <a href="https://www.braze.com/resources/articles/france-cnil-email-tracking-pixels">https://www.braze.com/resources/articles/france-cnil-email-tracking-pixels</a> / <a href="https://www.braze.com/resources/articles/apac-email-deliverability">https://www.braze.com/resources/articles/apac-email-deliverability</a></li>
+<li><strong>Company:</strong> Braze</li>
+<li><strong>Signal tag:</strong> AI decisioning / marketer agents / privacy / email deliverability / CRM operations</li>
+<li><strong>Persona affected:</strong> growth_crm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Braze query는 Apify RAG에서 HTTP 500이었지만, direct public 수집에서 2026-08-04 전후로 <code>How Product Teams at Braze Build at Scale</code>, <code>A marketer’s guide to agents</code>, CNIL email pixel guidance, APAC deliverability 콘텐츠가 잡혔다. 특히 Braze 제품팀 콘텐츠는 AI Decisioning Product team과 BrazeAI Decisioning 관련 메시지를 포함한다.</p>
+<p>Braze의 흐름은 명확하다. CRM AI를 단순 추천/개인화가 아니라, agent 운영, privacy, deliverability, campaign execution quality와 묶는다. Mixpanel은 Braze와 정면 경쟁보다 <strong>메시지가 실제 고객 행동을 바꿨는지 검증하는 upstream/downstream behavioral intelligence</strong>로 자리 잡아야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “Braze는 메시지를 더 잘 보내게 합니다. Mixpanel은 그 메시지가 activation, feature adoption, retention을 실제로 바꿨는지 검증합니다.”</li>
+<li><strong>Proposal/deck update:</strong> CRM AI objection card에 <code>AI decisioning + privacy/deliverability + behavior impact measurement</code> 구조 추가.</li>
+<li><strong>Customer outreach angle:</strong> Braze 도입/고도화 고객에게 campaign impact beyond opens/clicks 분석 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Growth/CRM persona objection 대응에 반영.</li>
+</ul>
+<hr/>
+<h2>Watchlist / 기타 신호</h2>
+<ul>
+<li><strong>Airbridge Google/measurement stack:</strong> Airbridge가 <code>Google I/O 2026: 5 measurement shifts every app marketer needs to revisit</code>, <code>Web-to-app Google Ads Setup Guide</code>, 한국어 ROI/크로스채널 attribution 가이드를 노출했다. attribution tool이 AI search, web-to-app, subscription app campaign까지 measurement agenda를 넓히는 흐름이다.</li>
+<li><strong>Amplitude:</strong> 이번 주 Apify RAG는 <code>Kimi</code> tag page 1건만 반환했고 high-signal 신규 콘텐츠는 약했다. 지난주 HYBRD Agent Analytics 사례는 계속 유효한 watch item.</li>
+<li><strong>AppsFlyer:</strong> Apify RAG는 HTTP 500. Direct 수집에서는 AI finance marketing, retail media measurement, neutrality/independent measurement 관련 공식 페이지가 잡혔지만 신규성·날짜 근거가 약해 Top 5에서 제외했다.</li>
+<li><strong>MoEngage:</strong> Apify RAG는 HTTP 500. Direct 수집은 customer story/filter page와 Gartner Peer Insights customer choice content 중심이라 이번 주 high-signal은 약했다.</li>
+<li><strong>Mixpanel vertical pages:</strong> finance, ecommerce, healthcare, B2B SaaS pages에서 2026-08-07 date hit가 잡혔지만 CMS 일괄 수정 가능성이 있어 보조 신호로만 처리했다.</li>
+</ul>
+<h2>Sales Backlog Candidates</h2>
+<h3>[BACKLOG-1] Experimentation impact measurement one-pager</h3>
+<ul>
+<li><strong>Action:</strong> feature flag, canary deployment, A/B test를 product impact와 retention metric으로 연결하는 1장 제작.</li>
+<li><strong>Persona target:</strong> product_pm, data_analytics</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-2] Fintech onboarding friction audit template</h3>
+<ul>
+<li><strong>Action:</strong> Clip story 기반으로 금융 funnel의 completion, time-to-complete, retry/error, support contact, retention cohort metric set 정리.</li>
+<li><strong>Persona target:</strong> product_pm, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-3] AI analytics readiness package v2</h3>
+<ul>
+<li><strong>Action:</strong> Airbridge AI usage data를 근거로 event taxonomy, SDK QA, reporting governance, MCP/agent policy checklist 제작.</li>
+<li><strong>Persona target:</strong> data_analytics, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-4] Personalization impact measurement slide</h3>
+<ul>
+<li><strong>Action:</strong> VWO/Wingify 대응용으로 AI personalization 실행 layer와 Mixpanel behavior impact layer 차이를 정리.</li>
+<li><strong>Persona target:</strong> growth_crm, product_pm, exec_cmo</li>
+<li><strong>Priority:</strong> Medium-High</li>
+</ul>
+<h3>[BACKLOG-5] CRM AI behavior impact objection card</h3>
+<ul>
+<li><strong>Action:</strong> Braze AI decisioning, marketer agents, privacy/deliverability 메시지에 대응하는 campaign impact beyond opens/clicks card 업데이트.</li>
+<li><strong>Persona target:</strong> growth_crm, data_analytics</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h2>Caveats &amp; 다음 개선 항목</h2>
+<p>1. <strong>Apify RAG 부분 장애:</strong> Braze, MoEngage, AppsFlyer는 HTTP 500. Mixpanel, Amplitude, Airbridge/AB180, VWO는 반환 성공. 실패한 query는 direct public official fetch로 보강했다.</p>
+<p>2. <strong>Web extract/search 도구 미구성:</strong> Firecrawl 기반 web_extract가 환경 미구성으로 실패했다. 이번 보고서는 Apify RAG 결과와 직접 public fetch 결과만 사용했다.</p>
+<p>3. <strong>Direct 수집 한계:</strong> official domain/sitemap/public page만 사용했고 login-only/private content 우회는 하지 않았다. 날짜는 RAG snippet, page body date hit, sitemap/page metadata가 섞여 있어 CMS 일괄 수정과 신규 발행을 구분해야 한다.</p>
+<p>4. <strong>YouTube/Instagram 미실행:</strong> 전용 Actor schema/비용이 확정되지 않아 실행하지 않았다. social/video signal은 이번 주 범위에서 제외.</p>
+<p>5. <strong>Curator Log/Sheets:</strong> 이번 cron 환경에는 Google Sheet append tool이 노출되지 않아 실제 Sheet append는 수행하지 못했다. High-signal 후보는 본 report와 backlog candidate로 남겼다.</p>
+<p>6. <strong>외부 인용 전 검증:</strong> Airbridge의 820 brands/16,610 questions/MCP 수치, VWO/Wingify suite 표현, Braze AI Decisioning 세부 메시지는 세일즈 자료에 넣기 전 원문 재확인 권장.</p>
+<h2>Raw / Artifacts</h2>
+<ul>
+<li>Apify RAG raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-rag-2026-08-10.json</code></li>
+<li>Direct public raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-direct-public-2026-08-10.json</code></li>
+<li>Collector script: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/run_partner_intel_2026_08_10.py</code></li>
+</ul>
+  </div>
+</main>
+</body>
+</html>
