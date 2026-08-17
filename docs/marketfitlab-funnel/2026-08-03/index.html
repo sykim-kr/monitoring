@@ -49,7 +49,7 @@
       <div class="step"><span>Form starts</span><b class="mask">&lt;5</b><small>small sample masked</small></div>
       <div class="step"><span>Submits</span><b class="mask">&lt;5</b><small>small sample masked</small></div>
     </div>
-    <div class="alert"><b>폼 이탈 진단:</b> 폼 단계 표본이 작고 단계 간 이벤트 정합성 이슈가 있어 공개본에서는 세부 수치와 비율을 마스킹한다. 같은 사용자·세션의 중복 이벤트, 이전 시작 후 이탈, 또는 이벤트 발화 순서 차이가 섞였을 가능성이 있어 “이탈률 악화”로 단정하지 않고 내부 tracking QA 대상으로 본다.</div>
+    <div class="alert"><b>폼 이탈 진단:</b> 폼 단계 표본이 작고 단계 간 이벤트 정합성 이슈가 있어 공개본에서는 세부 수치와 비율을 마스킹한다. 중복 집계나 이벤트 발화 순서 차이가 섞였을 가능성이 있어 “이탈률 악화”로 단정하지 않고 측정 정합성 점검 대상으로 본다.</div>
 
     <h2 class="section">Daily table</h2>
     <div class="table-wrap"><table>
@@ -74,8 +74,7 @@
     <h2 class="section">Validation & Caveats</h2>
     <ul>
       <li>Read-only 집계 분석이다. 개인 식별 데이터와 개별 사용자 레코드는 포함하지 않았다.</li>
-      <li>GA4는 numeric propertyId/권한이 확정되지 않아 사용하지 않았다. not used: propertyId/permission not confirmed.</li>
-      <li>BigQuery는 MarketFit Lab 관련 테이블을 이번 bounded job 범위에서 추가 조회하지 않았다.</li>
+      <li>타 데이터 소스는 이번 공개 분석 범위에 포함하지 않았다.</li>
       <li>폼 단계는 주간 표본이 5건 미만 또는 매우 작아 공개본에서 마스킹했다. 폼 제출/이탈 원인은 가설이며, 이벤트 QA 전 단정 금지.</li>
       <li>전주 리포트에서 방문, 블로그, CTA는 index에서 자동 추출 가능했으나 폼시작/제출 수치는 공개 마스킹 정책 때문에 자동 추출 제한으로 표기했다.</li>
     </ul>

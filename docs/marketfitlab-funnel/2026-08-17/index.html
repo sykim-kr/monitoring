@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarketFit Lab Funnel Report 2026-08-17</title>
+  <style>
+    :root{--primary:#1976D2;--alert:#D84315;--light:#E8F4FB;--text:#222222;--secondary:#888888;--border:#E0E0E0;--ok:#2E7D32;--soft:#F7FAFD;}
+    *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--text);font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}.hero{background:var(--primary);color:#fff;padding:32px 0}.hero h1{margin:0 0 8px;font-size:28px;line-height:1.35}.meta{color:rgba(255,255,255,.85);font-size:13px}.headline{background:var(--light);border-bottom:1px solid var(--border);padding:22px 0}.headline h2{margin:0;color:var(--alert);font-size:24px;line-height:1.38}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.grid{grid-template-columns:1fr}.hero h1{font-size:23px}.headline h2{font-size:20px}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:17px;background:#fff}.card.blue{background:var(--light)}.label{font-size:12px;color:var(--secondary);font-weight:800;letter-spacing:.02em}.value{font-size:30px;font-weight:900;margin:4px 0}.sub{font-size:13px;color:var(--secondary)} h2.section{font-size:20px;margin:34px 0 12px;border-bottom:2px solid var(--border);padding-bottom:8px}.note{background:var(--light);border-left:5px solid var(--primary);border-radius:8px;padding:14px 16px;margin:14px 0}.alert{background:#FBE9E7;border-left:5px solid var(--alert);border-radius:8px;padding:14px 16px;margin:14px 0}.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--border);padding:10px 12px;text-align:left}th{background:var(--soft)}td.num,th.num{text-align:right;white-space:nowrap}.down{color:var(--alert);font-weight:800}.up{color:var(--ok);font-weight:800}.pill{display:inline-block;border-radius:999px;padding:2px 9px;background:var(--light);color:var(--primary);font-weight:800;font-size:12px}.mask{font-weight:900;color:var(--alert)}footer{margin:42px 0;color:var(--secondary);font-size:13px}.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}.step{border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff}.step b{display:block;font-size:22px}.step span{font-size:12px;color:var(--secondary)}@media(max-width:860px){.funnel{grid-template-columns:1fr 1fr}}@media(max-width:540px){.funnel{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="hero"><div class="wrap">
+    <h1>MarketFit Lab Weekly Funnel + Demo Form Abandonment Report</h1>
+    <div class="meta">분석 기간: 2026-08-10 ~ 2026-08-16 (Asia/Seoul 기준) · 발행일: 2026-08-17 · Source: aggregated event data</div>
+  </div></section>
+
+  <section class="headline"><div class="wrap">
+    <h2>So What: 방문과 CTA는 회복됐지만, CTA 94건 중 폼 시작은 7건뿐이다. 이번 주 병목은 유입보다 Articul8 CTA 클릭 후 폼 진입 설득과 tracking 정합성이다.</h2>
+  </div></section>
+
+  <main class="wrap">
+    <div class="grid">
+      <div class="card blue"><div class="label">VISITS / PAGE VIEWS</div><div class="value">2,278</div><div class="sub">전주 1,595 대비 <span class="up">+42.8%</span></div></div>
+      <div class="card"><div class="label">BLOG VIEW RATE</div><div class="value">29.7%</div><div class="sub">677 / 2,278 · 전주 44.2% 대비 <span class="down">-14.5%p</span></div></div>
+      <div class="card"><div class="label">CTA CLICKS</div><div class="value">94</div><div class="sub">demo 22 + Articul8 72 · 전주 10 대비 <span class="up">+840.0%</span></div></div>
+      <div class="card"><div class="label">FORM COMPLETION</div><div class="value mask">masked</div><div class="sub">demo submit &lt;5 공개 마스킹 · start 7</div></div>
+    </div>
+
+    <h2 class="section">Week-over-week comparison</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Metric</th><th class="num">Prior 2026-08-03~08-09</th><th class="num">Current 2026-08-10~08-16</th><th class="num">Change</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Page views / visits proxy</td><td class="num">1,595</td><td class="num">2,278</td><td class="num up">+42.8%</td><td>유입 규모는 주중 400대 page view까지 회복했다. 주말은 여전히 낮다.</td></tr>
+        <tr><td>Blog views</td><td class="num">705</td><td class="num">677</td><td class="num down">-4.0%</td><td>방문 증가 대비 블로그 소비율은 44.2%에서 29.7%로 낮아졌다.</td></tr>
+        <tr><td>Total demo CTA clicks</td><td class="num">10</td><td class="num">94</td><td class="num up">+840.0%</td><td>Articul8 CTA가 72건으로 급증했다. 수요 증가와 tracking 변경 가능성을 분리 확인해야 한다.</td></tr>
+        <tr><td>Demo form starts</td><td class="num">전주 수치 자동 추출 제한</td><td class="num">7</td><td class="num">확인 필요</td><td>CTA 대비 폼 시작률은 7.4%다.</td></tr>
+        <tr><td>Demo submissions</td><td class="num">전주 수치 자동 추출 제한</td><td class="num mask">&lt;5</td><td class="num">확인 필요</td><td>공개본은 소표본 마스킹. 제출률은 소표본이라 공개하지 않는다.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="section">Primary funnel and drop-off</h2>
+    <div class="funnel">
+      <div class="step"><span>Page views</span><b>2,278</b><small>100%</small></div>
+      <div class="step"><span>Blog views</span><b>677</b><small>29.7% of page views</small></div>
+      <div class="step"><span>Demo CTA clicks</span><b>94</b><small>13.9% of blog views</small></div>
+      <div class="step"><span>Form starts</span><b>7</b><small>7.4% of CTA</small></div>
+      <div class="step"><span>Submits</span><b class="mask">&lt;5</b><small>소표본 마스킹</small></div>
+    </div>
+    <div class="alert"><b>폼 이탈 진단:</b> start와 abandon이 모두 7건으로 같은 수준이다. 단, submit도 관측되어 단순 UX 이탈 100%로 단정하면 안 된다. 이벤트 정의와 단계 간 전환 측정 정합성 점검이 먼저 필요하다.</div>
+
+    <h2 class="section">Daily table</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th class="num">Page views</th><th class="num">Blog views</th><th class="num">CTA total</th><th class="num">Demo CTA</th><th class="num">Articul8 CTA</th><th class="num">Form stage detail</th></tr></thead>
+      <tbody>
+        <tr><td>2026-08-10</td><td class="num">405</td><td class="num">114</td><td class="num">16</td><td class="num">10</td><td class="num">6</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-11</td><td class="num">358</td><td class="num">140</td><td class="num">11</td><td class="num">2</td><td class="num">9</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-12</td><td class="num">403</td><td class="num">124</td><td class="num">19</td><td class="num">3</td><td class="num">16</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-13</td><td class="num">414</td><td class="num">163</td><td class="num">10</td><td class="num">2</td><td class="num">8</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-14</td><td class="num">363</td><td class="num">75</td><td class="num">8</td><td class="num">4</td><td class="num">4</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-15</td><td class="num">170</td><td class="num">36</td><td class="num">17</td><td class="num">1</td><td class="num">16</td><td class="num mask">masked</td></tr>
+        <tr><td>2026-08-16</td><td class="num">165</td><td class="num">25</td><td class="num">13</td><td class="num">0</td><td class="num">13</td><td class="num mask">masked</td></tr>
+      </tbody>
+      <tfoot><tr><th>Total</th><th class="num">2,278</th><th class="num">677</th><th class="num">94</th><th class="num">22</th><th class="num">72</th><th class="num">start 7 · remaining form-stage details masked</th></tr></tfoot>
+    </table></div>
+
+    <h2 class="section">Form abandonment diagnosis</h2>
+    <ul>
+      <li><b>Fact:</b> CTA는 전주 10건에서 이번 주 94건으로 크게 늘었다. 특히 Articul8 CTA가 72건이다.</li>
+      <li><b>Fact:</b> 폼 시작은 7건으로, CTA 대비 시작률은 7.4%다.</li>
+      <li><b>Fact:</b> 오류 이벤트는 공개 기준 소표본이다. 검증 오류 급증이라고 단정할 근거는 부족하다.</li>
+      <li><b>Hypothesis:</b> Articul8 CTA 클릭자의 기대 메시지와 데모 폼 진입 화면 사이의 continuity가 약하거나, CTA 이벤트 정의가 넓게 잡혔을 가능성이 있다.</li>
+      <li><b>Limit:</b> 집계 이벤트만 사용했고, 사용자/세션 단위 원문과 PII는 조회하지 않았다.</li>
+    </ul>
+
+    <h2 class="section">Recommended actions</h2>
+    <div class="note"><span class="pill">P0</span> Articul8 CTA 클릭 후 첫 화면을 진단형 microcopy로 맞춘다. 예: “우리 조직에 맞는 AI 활용 진단을 15분 안에 확인”처럼 클릭 의도와 폼 목적을 연결한다. 성공 기준은 start/CTA 15% 이상 회복.</div>
+    <div class="note"><span class="pill">P1</span> 측정 정합성 점검을 먼저 실행한다. CTA 클릭부터 폼 시작까지 단계 간 측정 기준과 중복 집계 가능성을 점검한다.</div>
+    <div class="note"><span class="pill">P2</span> 블로그 소비율이 낮아졌으므로 상위 유입 페이지의 CTA 배치와 콘텐츠 문맥을 분리해 다음 주 CTA click/blog view를 함께 모니터링한다.</div>
+
+    <h2 class="section">Validation & Caveats</h2>
+    <ul>
+      <li>본 공개본은 집계 이벤트 기준이다. 개인 식별 가능 데이터와 사용자 단위 원문은 포함하지 않는다.</li>
+      <li>본 공개본은 집계 이벤트 데이터만을 기준으로 작성했으며, 타 데이터 소스는 이번 공개 분석 범위에 포함하지 않았다.</li>
+      <li>CTA total은 주요 CTA 클릭 이벤트 2종을 합산한 값이다. 이벤트 정의와 중복 가능성은 추가 점검이 필요하다.</li>
+      <li>demo submit은 5건 미만이라 공개본에서 마스킹했다. 세부 폼 원문과 사용자 단위 원문은 조회하지 않았다.</li>
+      <li>전주 리포트에서 방문, 블로그, CTA는 자동 추출 가능했으나 폼시작/제출 수치는 공개 마스킹 정책 때문에 자동 추출 제한으로 표기했다.</li>
+    </ul>
+
+    <h2 class="section">Previous report</h2>
+    <p><a href="../2026-08-10/index.html">지난 리포트: 2026-08-10 MarketFit Lab Funnel Report</a></p>
+    <footer>Prepared by 또롱이, OCEO Analytics / Product Insight Agent. Public-safe static report.</footer>
+  </main>
+</body>
+</html>
