@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Partner Intelligence - 2026-08-24</title>
+  <style>
+:root { color-scheme: dark; }
+body { margin:0; background:#0f1117; color:#e5e7eb; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.72; }
+main { max-width: 980px; margin: 0 auto; padding: 44px 22px 80px; }
+a { color:#a78bfa; word-break: break-word; }
+h1 { font-size: 30px; margin: 0 0 20px; letter-spacing:-0.02em; }
+h2 { margin-top: 44px; padding-top: 20px; border-top:1px solid #283044; color:#f8fafc; }
+h3 { margin-top: 34px; color:#c4b5fd; }
+h4 { margin-top: 22px; color:#93c5fd; }
+p, li { font-size: 15.5px; }
+blockquote { margin: 20px 0 28px; padding: 14px 18px; border-left: 4px solid #6d5dfc; background:#171a25; color:#cbd5e1; }
+hr { border:0; border-top:1px solid #283044; margin:34px 0; }
+code { background:#1f2937; padding:2px 5px; border-radius:5px; }
+strong { color:#fff; }
+.nav { margin-bottom: 26px; }
+.nav a { text-decoration:none; color:#c4b5fd; font-size:14px; }
+.card { background:#111827; border:1px solid #243044; border-radius:16px; padding:28px; box-shadow:0 16px 40px rgba(0,0,0,.28); }
+</style>
+</head>
+<body>
+<main>
+  <div class="nav"><a href="index.html">← Partner Intelligence 목록</a> · <a href="../index.html">전체 리포트</a></div>
+  <div class="card">
+  <h1>Weekly Partner Intelligence - 2026-08-24</h1>
+<blockquote>수집 기간: 2026-08-17 ~ 2026-08-24 | 대상: Mixpanel, Amplitude, Braze, MoEngage, AppsFlyer, Airbridge/AB180, VWO<br/><br/>운영 원칙: 공개 official-domain 중심 수집. proactive personal curation 미실행. Raw JSON은 로컬 workspace에만 저장.<br/><br/>수집 caveat: Apify RAG Web Browser는 이번 cron에서 실행을 시도했으나 300초 timeout이 발생했고, timeout 전 Amplitude, Braze, MoEngage, AppsFlyer query가 HTTP 500을 반환했다. 보강으로 official domain, sitemap, public page 직접 수집을 수행했다. Firecrawl 기반 web_search는 환경 미구성으로 실패했다. YouTube/Instagram 전용 Actor는 schema/비용 불확실성과 시간 제한 때문에 실행하지 않았다.</blockquote>
+<h2>Top 5</h2>
+<h3>1. Mixpanel Agent 문서가 8월 18일 업데이트됨 - 분석에서 실험 의사결정까지 AI assistant 범위가 넓어지는 신호</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://docs.mixpanel.com/guides/guides-by-use-case/empower-your-team/mixpanel-agent">https://docs.mixpanel.com/guides/guides-by-use-case/empower-your-team/mixpanel-agent</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> AI agent / product analytics / experiments / feature flags / decision loop</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Direct public fetch에서 <code>Use Mixpanel Agent to Go From Question to Decision, Faster</code> 문서가 2026-08-18 date hit로 확인됐다. 페이지 본문은 Search, Insights, Sessions, Experiments Agent를 묶어 질문, 분석, 세션 이해, 실험 결과 해석, feature flag rollout까지 연결한다. 특히 Experiments Agent는 실험 설정, 결과 해석, winner rollout을 대화형으로 돕는다고 설명한다.</p>
+<p>이 메시지는 Mixpanel이 단순 dashboard보다 “질문에서 결정까지” 가는 운영 레이어로 포지셔닝을 강화한다는 의미다. 세일즈에서는 AI 기능 자체보다 PM과 분석팀의 decision velocity를 줄이는 사례로 말하는 편이 좋다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “Mixpanel AI는 차트를 대신 그리는 도구가 아니라, PM이 질문하고 실험 결과를 해석하고 rollout 판단까지 빠르게 가는 decision loop입니다.”</li>
+<li><strong>Proposal/deck update:</strong> AI product analytics 슬라이드에 <code>Question -&gt; Insight -&gt; Session evidence -&gt; Experiment decision -&gt; Rollout</code> 흐름 추가.</li>
+<li><strong>Customer outreach angle:</strong> feature flag, A/B test, product experiment를 이미 운영하지만 결과 해석과 action 결정이 느린 PM 조직에 실험 운영 audit 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Mixpanel 공식 문서 근거라 제안서 messaging에 반영 가능.</li>
+</ul>
+<hr/>
+<h3>2. Amplitude Agent Analytics가 agent trace와 eval을 product event로 연결한다고 전면화</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://amplitude.com/agent-analytics">https://amplitude.com/agent-analytics</a></li>
+<li><strong>Company:</strong> Amplitude</li>
+<li><strong>Signal tag:</strong> Agent analytics / AI product measurement / retention / revenue attribution</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Amplitude의 Agent Analytics 페이지는 “agent traces and evals를 product events로 바꿔 agent quality를 conversion, retention, revenue와 연결한다”고 설명한다. Direct fetch에서 2026-08-19 date hit가 확인됐다. 이는 AI agent 제품을 만드는 팀에게 기존 product analytics와 별도인 “AI behavior observability + business impact measurement” 카테고리를 만들려는 움직임이다.</p>
+<p>Mixpanel도 AI agent usage를 단순 호출 수, latency, eval score로만 보지 말고 고객 여정과 outcome으로 연결해야 한다는 메시지를 가져갈 수 있다. AI agent가 좋은 답을 했는지가 아니라, 사용자가 그 답 이후 activation, conversion, retention 행동을 했는지가 핵심이다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI agent의 품질 평가는 eval score에서 끝나면 안 됩니다. 사용자가 agent와 상호작용한 뒤 어떤 제품 행동과 매출 결과가 생겼는지를 봐야 합니다.”</li>
+<li><strong>Proposal/deck update:</strong> AI agent measurement checklist에 <code>trace/eval -&gt; product event -&gt; funnel/cohort -&gt; retention/revenue</code> 항목 추가.</li>
+<li><strong>Customer outreach angle:</strong> 챗봇, 상담 agent, 내부 copilots를 출시한 SaaS, fintech, commerce PM에게 AI agent impact measurement workshop 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Amplitude가 경쟁축을 명확히 만들고 있어 Mixpanel 대응 메시지 필요.</li>
+</ul>
+<hr/>
+<h3>3. Braze가 acquisition, generative AI, martech consolidation을 한 주에 연속 발행 - CRM 실행 시장의 관심이 “더 많은 캠페인”에서 “stack 정리 + AI 의사결정”으로 이동</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/customer-acquisition-strategy">https://www.braze.com/resources/articles/customer-acquisition-strategy</a></li>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/generative-ai-for-marketing">https://www.braze.com/resources/articles/generative-ai-for-marketing</a></li>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/martech-consolidation">https://www.braze.com/resources/articles/martech-consolidation</a></li>
+<li><strong>Company:</strong> Braze</li>
+<li><strong>Signal tag:</strong> Customer acquisition / generative AI / martech consolidation / CRM operations</li>
+<li><strong>Persona affected:</strong> growth_crm, exec_cmo, data_analytics</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Braze는 2026-08-21 <code>Customer acquisition strategy</code>, 2026-08-20 <code>Generative AI for marketing</code>, 2026-08-19 <code>Martech consolidation</code>을 공식 resources에 노출했다. 특히 customer acquisition 글은 generative AI가 outreach content와 variants를 만들고, action optimization은 “무엇을 누구에게 언제 보낼지”를 고르는 별도 job이라고 설명한다.</p>
+<p>CRM/engagement vendor는 이제 캠페인 발송 기능보다 AI decisioning, stack consolidation, acquisition-to-retention 운영 효율을 강조한다. Mixpanel 관점에서는 Braze와 경쟁하기보다 downstream 캠페인 실행 전후의 행동 변화와 장기 retention을 검증하는 upstream analytics로 포지셔닝해야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “Braze 같은 실행 도구가 메시지를 더 잘 보내게 해도, 어떤 고객 행동이 실제 성장으로 이어졌는지 검증하는 layer는 별도로 필요합니다.”</li>
+<li><strong>Proposal/deck update:</strong> CRM/MA 제안서에 <code>Campaign decisioning -&gt; Behavioral outcome -&gt; Retention/LTV proof</code> 슬라이드 추가.</li>
+<li><strong>Customer outreach angle:</strong> Braze, MoEngage, CRM stack을 통합 또는 교체 중인 Growth/CRM Lead에게 measurement readiness 진단 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Growth/CRM persona objection 대응에 반영.</li>
+</ul>
+<hr/>
+<h3>4. VWO가 feature flags for PMs를 ebook으로 제시 - experimentation이 개발 배포가 아니라 product outcome 운영으로 확장</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://vwo.com/ebooks/feature-flags-guide-for-product-managers/">https://vwo.com/ebooks/feature-flags-guide-for-product-managers/</a></li>
+<li><strong>Source:</strong> <a href="https://vwo.com/product-updates/">https://vwo.com/product-updates/</a></li>
+<li><strong>Company:</strong> VWO / AB Tasty</li>
+<li><strong>Signal tag:</strong> Feature flags / experimentation / product management / rollout governance</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>VWO의 <code>A Product Manager&#x27;s Guide to Feature Flags</code>는 2026-08-23 date hit가 확인됐고, 설명은 feature rollout을 안전하게 운영하고, 배포 없이 실험하고, release data를 더 나은 제품 결정으로 바꾸는 프레임을 제시한다. Product Updates 페이지도 2026-08-17, 2026-08-18, 2026-08-23 date hit가 있다.</p>
+<p>실험 시장은 “테스트 도구”에서 PM의 rollout governance와 feature impact 운영으로 이동 중이다. Mixpanel은 feature flag tool 자체와 정면 경쟁하기보다, rollout 이후 사용자 행동, cohort retention, revenue impact를 분석하는 layer로 들어가야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “Feature flag는 안전한 배포를 돕지만, 그 기능이 실제 adoption과 retention을 만들었는지는 product analytics에서 검증해야 합니다.”</li>
+<li><strong>Proposal/deck update:</strong> 실험/feature rollout 제안서에 <code>Flag rollout -&gt; Adoption -&gt; Cohort behavior -&gt; Retention/revenue impact</code> 분석 템플릿 추가.</li>
+<li><strong>Customer outreach angle:</strong> LaunchDarkly, VWO, Optimizely, 자체 flag를 쓰는 PM 조직에 post-launch analytics 설계 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - PM persona 메시지와 실험 운영 playbook에 반영.</li>
+</ul>
+<hr/>
+<h3>5. Mixpanel이 healthcare, ecommerce, B2B SaaS, finance 산업별 페이지를 8월 20일 전후 업데이트 - vertical sales motion 강화 신호</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/industries/healthcare-analytics/">https://mixpanel.com/industries/healthcare-analytics/</a></li>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/industries/ecommerce-analytics/">https://mixpanel.com/industries/ecommerce-analytics/</a></li>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/industries/b2b-saas-analytics/">https://mixpanel.com/industries/b2b-saas-analytics/</a></li>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/industries/finance-analytics/">https://mixpanel.com/industries/finance-analytics/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Vertical positioning / digital analytics / ecommerce / fintech / healthcare / B2B SaaS</li>
+<li><strong>Persona affected:</strong> exec_cmo, product_pm, growth_crm</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Direct fetch에서 Mixpanel 산업별 페이지들이 2026-08-19~2026-08-21 date hit를 보였다. Ecommerce 페이지는 “path to purchase and beyond”, “checkout flows to repeat buyers”, “plain language questions”를 말하고, finance 페이지는 key metrics, user flows, trends 기반 fintech analytics를 강조한다.</p>
+<p>이건 Mixpanel이 horizontal product analytics에서 vertical pain 중심의 sales motion을 강화한다는 신호다. 국내 제안서도 범용 기능 나열보다 fintech, commerce, healthcare, SaaS별 metric tree와 use case로 들어가는 편이 좋다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “같은 product analytics라도 산업별로 봐야 할 행동 지표가 다릅니다. 커머스는 checkout 이후 repeat, 금융은 신뢰 행동과 상품 탐색, SaaS는 activation과 expansion이 핵심입니다.”</li>
+<li><strong>Proposal/deck update:</strong> Mixpanel intro deck 앞부분에 vertical별 metric tree 1장 추가.</li>
+<li><strong>Customer outreach angle:</strong> 금융, 커머스, SaaS 타깃별로 첫 미팅 agenda를 다르게 구성. 예: finance AI assistant impact, commerce repeat buyer journey, SaaS activation-to-expansion.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - 제안서 구조 업데이트 후보.</li>
+</ul>
+<hr/>
+<h2>Watchlist / 기타 신호</h2>
+<ul>
+<li><strong>Braze APAC deliverability:</strong> <code>Email deliverability across APAC</code>가 2026-08-21로 잡혔다. 한국/일본/동남아 CRM 운영 고객에게 regulatory diversity, ISP fragmentation, localization 메시지로 활용 가능하다.</li>
+<li><strong>AppsFlyer Enterprise-Grade Security:</strong> 공식 product page가 access governance, audit, compliance control을 강조한다. 신규 날짜 근거는 약하지만, MMP/measurement 구매에서 보안과 권한 통제가 enterprise blocker가 된다는 신호로 watch.</li>
+<li><strong>MoEngage:</strong> direct 수집에서 Gartner Peer Insights Voice of the Customer 2026, customer stories, campaign support 콘텐츠가 잡혔다. 이번 주 신규 date 근거가 약해 Top 5 제외.</li>
+<li><strong>Airbridge/AB180:</strong> Airbridge direct 수집은 signup/demo/LLM-facing 링크와 contamination이 많았다. official blog 신규 high-signal은 이번 주 확정하지 못했다.</li>
+<li><strong>YouTube/Instagram:</strong> 전용 Actor 미실행. Social/video signal은 이번 주 report 범위에서 제외.</li>
+</ul>
+<h2>Sales Backlog Candidates</h2>
+<h3>[BACKLOG-1] AI Agent Impact Measurement one-pager</h3>
+<ul>
+<li><strong>Action:</strong> Amplitude Agent Analytics와 Mixpanel Agent 문서를 근거로 <code>trace/eval -&gt; product event -&gt; funnel/cohort -&gt; retention/revenue</code> 1장 제작.</li>
+<li><strong>Persona target:</strong> product_pm, data_analytics, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-2] Experiment to rollout decision loop slide</h3>
+<ul>
+<li><strong>Action:</strong> Mixpanel Experiments Agent와 VWO feature flags guide를 묶어 PM용 실험 결과 해석, rollout, post-launch impact 슬라이드 제작.</li>
+<li><strong>Persona target:</strong> product_pm</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-3] CRM AI decisioning measurement checklist</h3>
+<ul>
+<li><strong>Action:</strong> Braze acquisition/generative AI/action optimization 메시지를 활용해 CRM 실행 전후 행동 변화 검증 checklist 작성.</li>
+<li><strong>Persona target:</strong> growth_crm, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-4] Vertical metric tree starter pack</h3>
+<ul>
+<li><strong>Action:</strong> Mixpanel healthcare, ecommerce, B2B SaaS, finance 페이지 기반으로 산업별 첫 미팅용 metric tree 초안 제작.</li>
+<li><strong>Persona target:</strong> exec_cmo, product_pm, growth_crm</li>
+<li><strong>Priority:</strong> Medium-High</li>
+</ul>
+<h3>[BACKLOG-5] APAC CRM deliverability and behavioral outcome note</h3>
+<ul>
+<li><strong>Action:</strong> Braze APAC deliverability를 참고해 email/push/SMS 도달성 변화와 제품 행동 KPI를 연결하는 짧은 note 작성.</li>
+<li><strong>Persona target:</strong> growth_crm, data_analytics</li>
+<li><strong>Priority:</strong> Medium</li>
+</ul>
+<h2>Caveats &amp; 다음 개선 항목</h2>
+<p>1. <strong>Apify RAG 장애:</strong> 이번 cron에서 Apify RAG 실행을 시도했으나 300초 timeout. timeout 전 Amplitude, Braze, MoEngage, AppsFlyer는 HTTP 500. direct public official fetch로 복구했다.</p>
+<p>2. <strong>Web search 미구성:</strong> Firecrawl 기반 web_search는 API 설정 부재로 실패했다.</p>
+<p>3. <strong>Direct 수집 한계:</strong> official domain/sitemap/public page만 사용했고 login-only/private content 우회는 하지 않았다. date hit는 page body, metadata, related content 날짜가 섞일 수 있어 신규 발행과 CMS 수정 구분은 외부 인용 전 재확인 필요.</p>
+<p>4. <strong>Airbridge contamination:</strong> Airbridge 수집 결과에 app/signup 및 LLM assistant 링크가 섞였다. official blog 신규성 판정은 보류했다.</p>
+<p>5. <strong>YouTube/Instagram 미실행:</strong> 전용 Actor schema/비용 불확실성과 runtime 제한 때문에 미실행.</p>
+<p>6. <strong>Curator Log/Sheets:</strong> 이번 cron 환경에는 Google Sheet append tool이 노출되지 않아 실제 Sheet append는 수행하지 못했다. High-signal 후보는 본 report와 backlog candidate로 남겼다.</p>
+<h2>Raw / Artifacts</h2>
+<ul>
+<li>Apify RAG raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-rag-2026-08-24.json</code></li>
+<li>Direct public raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-direct-public-2026-08-24.json</code></li>
+<li>Collector script: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/run_partner_intel_2026_08_24.py</code></li>
+</ul>
+  </div>
+</main>
+</body>
+</html>
