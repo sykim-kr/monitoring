@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Partner Intelligence - 2026-08-31</title>
+  <style>
+:root { color-scheme: dark; }
+body { margin:0; background:#0f1117; color:#e5e7eb; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.72; }
+main { max-width: 980px; margin: 0 auto; padding: 44px 22px 80px; }
+a { color:#a78bfa; word-break: break-word; }
+h1 { font-size: 30px; margin: 0 0 20px; letter-spacing:-0.02em; }
+h2 { margin-top: 44px; padding-top: 20px; border-top:1px solid #283044; color:#f8fafc; }
+h3 { margin-top: 34px; color:#c4b5fd; }
+h4 { margin-top: 22px; color:#93c5fd; }
+p, li { font-size: 15.5px; }
+blockquote { margin: 20px 0 28px; padding: 14px 18px; border-left: 4px solid #6d5dfc; background:#171a25; color:#cbd5e1; }
+hr { border:0; border-top:1px solid #283044; margin:34px 0; }
+code { background:#1f2937; padding:2px 5px; border-radius:5px; }
+strong { color:#fff; }
+.nav { margin-bottom: 26px; }
+.nav a { text-decoration:none; color:#c4b5fd; font-size:14px; }
+.card { background:#111827; border:1px solid #243044; border-radius:16px; padding:28px; box-shadow:0 16px 40px rgba(0,0,0,.28); }
+</style>
+</head>
+<body>
+<main>
+  <div class="nav"><a href="index.html">Partner Intelligence 목록</a> · <a href="../index.html">전체 리포트</a></div>
+  <div class="card">
+  <h1>Weekly Partner Intelligence - 2026-08-31</h1>
+<blockquote>수집 기간: 2026-08-24 ~ 2026-08-31 | 대상: Mixpanel, Amplitude, Braze, MoEngage, AppsFlyer, Airbridge/AB180, VWO<br/><br/>운영 원칙: 공개 official-domain 중심 수집. proactive personal curation 미실행. Raw JSON은 로컬 workspace에만 저장.<br/><br/>수집 caveat: Apify RAG Web Browser는 Mixpanel, Amplitude, Braze, MoEngage query에서 일부 성공했고 AppsFlyer, Airbridge/AB180, VWO는 HTTP 500을 반환했다. 보강으로 official domain, sitemap, public page 직접 수집을 수행했다. Firecrawl 기반 web_search/web_extract는 환경 미구성으로 실패했다. YouTube/Instagram 전용 Actor는 schema/비용 불확실성과 이번 주 official-domain 신호 우선순위 때문에 실행하지 않았다.</blockquote>
+<h2>Top 5</h2>
+<h3>1. Mixpanel이 headless analytics를 Claude와 연결해 전면화 - AI native workflow 안으로 product analytics가 들어가는 신호</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/blog/headless-analytics/">https://mixpanel.com/blog/headless-analytics/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Headless analytics / Claude / MCP / AI data workflow / governance</li>
+<li><strong>Persona affected:</strong> data_analytics, product_pm</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG에서 <code>Headless analytics: What is it and how is it different from headless BI?</code>가 2026-08-24 published_time으로 확인됐다. 페이지 설명은 headless analytics의 핵심 이점, Claude와 함께 쓰는 방식, headless platform 평가 기준을 다룬다.</p>
+<p>이번 신호는 Mixpanel이 UI 기반 product analytics를 넘어서 Claude, MCP, 내부 에이전트 workflow 속에서 쓰이는 행동 데이터 layer로 이동하고 있음을 보여준다. 고객이 이미 Claude Code, internal copilot, BI assistant를 쓰는 경우 “데이터를 보는 화면”보다 “AI가 안전하게 물어볼 수 있는 trusted product context”로 세일즈 메시지를 잡는 게 좋다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI가 SQL이나 dashboard를 우회해서 답하는 시대에는, product behavior context와 governance가 더 중요합니다. Mixpanel Headless는 Claude 같은 업무 환경 안에서 검증된 행동 데이터를 쓰게 만드는 layer입니다.”</li>
+<li><strong>Proposal/deck update:</strong> AI analytics 섹션에 <code>BI dashboard -&gt; AI workspace -&gt; governed product context</code> 전환 슬라이드 추가.</li>
+<li><strong>Customer outreach angle:</strong> Claude Code, Cursor, internal agent 도입 중인 SaaS, fintech, commerce 팀에게 headless analytics readiness 점검 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Mixpanel 공식 최신 글이라 제안서 메시지에 즉시 반영 가능.</li>
+</ul>
+<hr/>
+<h3>2. Mixpanel이 “product intelligence”와 Agent 업데이트를 연속 발행 - 속도보다 learning loop를 파는 방향으로 강화</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/blog/learn-faster-with-product-intelligence/">https://mixpanel.com/blog/learn-faster-with-product-intelligence/</a></li>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/blog/mixpanel-agent-product-updates/">https://mixpanel.com/blog/mixpanel-agent-product-updates/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Product intelligence / Mixpanel Agent / AI product team workflow / learn faster</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG에서 <code>How to use product intelligence to learn faster than you ship</code>는 2026-08-27 published_time, <code>Beyond the model: How we’re shaping Mixpanel Agent around the way people work</code>는 2026-08-26 published_time으로 확인됐다. 제품을 빨리 ship하는 것보다 더 빨리 배우고 의사결정하는 loop를 강조하는 흐름이다.</p>
+<p>이 포지셔닝은 “AI 기능” 자체보다 PM과 분석팀의 업무 방식에 초점을 둔다. Mixpanel Agent를 별도 chatbot으로 팔기보다 질문, 분석, follow-up, 실험, rollout 판단을 연결하는 operating model로 설명해야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI product analytics의 가치는 답변 생성이 아니라, 팀이 ship 이후 더 빨리 배우고 다음 결정을 내리는 속도입니다.”</li>
+<li><strong>Proposal/deck update:</strong> <code>Ship fast</code>보다 <code>Learn faster than you ship</code> 문구를 중심으로 product intelligence operating loop 그림 추가.</li>
+<li><strong>Customer outreach angle:</strong> 기능 출시는 많지만 post-launch learning이 약한 PM 조직에 product analytics operating review 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - PM persona 메시지 업데이트 후보.</li>
+</ul>
+<hr/>
+<h3>3. Mixpanel customer stories가 Agent와 Headless를 실사용 사례로 밀기 시작 - “분석가 부족” objection 대응 근거 확보</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/customers/how-acid-labs-runs-mixpanel-headless-claude-code/">https://mixpanel.com/customers/how-acid-labs-runs-mixpanel-headless-claude-code/</a></li>
+<li><strong>Source:</strong> <a href="https://mixpanel.com/customers/how-howbout-uses-mixpanel-agent-for-self-serve-analytics/">https://mixpanel.com/customers/how-howbout-uses-mixpanel-agent-for-self-serve-analytics/</a></li>
+<li><strong>Company:</strong> Mixpanel</li>
+<li><strong>Signal tag:</strong> Customer story / headless analytics / self-serve analytics / analyst capacity</li>
+<li><strong>Persona affected:</strong> product_pm, data_analytics, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG에서 Acid Labs의 <code>How Acid Labs Runs Mixpanel (Almost) Without Opening It</code>, Howbout의 <code>Howbout&#x27;s COO Needed an Analyst. Mixpanel Agent Got the Job</code> customer story가 확인됐다. Direct fetch에서도 두 페이지가 Mixpanel AI, Agent, Headless navigation과 함께 노출됐다.</p>
+<p>둘 다 “분석 리소스가 부족하다”, “현업이 직접 답을 얻고 싶다”는 구매 trigger에 맞닿아 있다. 특히 Acid Labs 사례는 Claude Code와 naming convention, formula style 같은 운영 규칙을 연결하는 점이 강하다. 이는 단순 self-serve dashboard보다 “AI가 조직의 데이터 규칙을 배우고 반복 분석을 대신하는 방식”으로 설명할 수 있다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “분석가를 더 뽑기 전에, 반복 질문을 AI와 product analytics workflow로 흡수할 수 있는지부터 봐야 합니다.”</li>
+<li><strong>Proposal/deck update:</strong> 고객 사례 섹션에 <code>Analyst capacity relief</code>와 <code>AI-ready analytics operating rules</code> 블록 추가.</li>
+<li><strong>Customer outreach angle:</strong> 데이터팀 backlog가 큰 스타트업, scale-up COO, Head of Product에게 2주짜리 self-serve analytics pilot 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - objection handling에 바로 유용.</li>
+</ul>
+<hr/>
+<h3>4. Amplitude가 Agent Analytics 보안 메시지를 강화 - AI trace 데이터의 privacy와 access control이 경쟁축으로 부상</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://amplitude.com/blog/agent-data-security">https://amplitude.com/blog/agent-data-security</a></li>
+<li><strong>Source:</strong> <a href="https://amplitude.com/agent-analytics">https://amplitude.com/agent-analytics</a></li>
+<li><strong>Company:</strong> Amplitude</li>
+<li><strong>Signal tag:</strong> Agent analytics / trace data security / privacy redaction / access control</li>
+<li><strong>Persona affected:</strong> data_analytics, product_pm, exec_cmo</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG에서 Amplitude의 <code>How to Secure AI Agent Traces Without Losing the Signal</code>가 2026-08-28 published, dateModified 2026-08-28로 확인됐다. 페이지 설명은 Agent Analytics로 agent trace를 보낼 때 role-based access와 privacy redaction을 기본으로 제공한다고 말한다.</p>
+<p>지난주 Amplitude가 agent trace와 eval을 product events로 연결한다고 전면화했다면, 이번 주는 그 데이터를 안전하게 보낼 수 있느냐를 buyer concern으로 끌어올렸다. AI agent product를 측정하려는 기업은 성능 측정뿐 아니라 trace 내 개인정보, 대화 데이터, 권한 통제를 묻기 시작할 가능성이 크다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “AI agent measurement는 outcome만 보면 부족합니다. trace, eval, product event를 연결하되 privacy redaction과 access control을 먼저 설계해야 합니다.”</li>
+<li><strong>Proposal/deck update:</strong> AI Agent Impact Measurement one-pager에 <code>Data security and governance</code> 체크리스트 추가.</li>
+<li><strong>Customer outreach angle:</strong> 상담봇, 금융 assistant, 의료/교육 copilot 운영팀에 agent analytics governance workshop 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - 경쟁사 메시지에 대응 필요.</li>
+</ul>
+<hr/>
+<h3>5. Braze가 conversational marketing, WhatsApp, always-on fan loyalty를 연속 노출 - CRM 실행 시장이 “채널 확장 + AI agent + loyalty”로 이동</h3>
+<ul>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/conversational-marketing">https://www.braze.com/resources/articles/conversational-marketing</a></li>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/articles/whatsapp-marketing">https://www.braze.com/resources/articles/whatsapp-marketing</a></li>
+<li><strong>Source:</strong> <a href="https://www.braze.com/resources/reports-and-guides/redefining-fan-loyalty-media-entertainment">https://www.braze.com/resources/reports-and-guides/redefining-fan-loyalty-media-entertainment</a></li>
+<li><strong>Company:</strong> Braze</li>
+<li><strong>Signal tag:</strong> Conversational marketing / WhatsApp / AI agents / fan loyalty / retention</li>
+<li><strong>Persona affected:</strong> growth_crm, exec_cmo, data_analytics</li>
+</ul>
+<h4>왜 중요한가</h4>
+<p>Apify RAG에서 Braze의 <code>Conversational marketing</code>은 2026-08-25 published, <code>WhatsApp marketing</code>은 2026-08-26 published로 확인됐다. <code>From tentpole to always-on: How AI is redefining fan loyalty in media and entertainment</code>는 2026-08-28 modified로 잡혔고, 설명에서 U.S. Soccer +43% subscriptions, Kayo Sports +14% 같은 outcome 수치를 제시한다.</p>
+<p>Braze는 CRM 실행 도구의 메시지를 채널 발송에서 “실시간 양방향 대화”, “AI agent”, “always-on loyalty”로 확장하고 있다. Mixpanel 관점에서는 Braze를 대체한다고 말하기보다, WhatsApp, SMS/RCS, app messaging 이후 고객 행동이 retention, subscription, repeat purchase로 이어졌는지 증명하는 upstream/downstream measurement layer로 잡아야 한다.</p>
+<h4>SY님이 어떻게 써먹을까</h4>
+<ul>
+<li><strong>Sales talk track:</strong> “WhatsApp이나 AI agent 캠페인을 늘리는 것만으로는 부족합니다. 대화 이후 사용자가 활성화, 재방문, 결제, 구독 유지로 움직였는지 Mixpanel에서 봐야 합니다.”</li>
+<li><strong>Proposal/deck update:</strong> CRM/MA 제안서에 <code>Conversation -&gt; Product behavior -&gt; Retention/LTV proof</code> 슬라이드 추가.</li>
+<li><strong>Customer outreach angle:</strong> Braze, MoEngage, Kakao/WhatsApp CRM을 쓰는 media, commerce, subscription app 고객에게 channel expansion measurement 진단 제안.</li>
+<li><strong>Watch / Act / Ignore:</strong> <strong>Act</strong> - Growth/CRM persona와 exec_cmo 메시지에 반영.</li>
+</ul>
+<hr/>
+<h2>Watchlist / 기타 신호</h2>
+<ul>
+<li><strong>MoEngage:</strong> RAG에서 <code>Top 10 Braze Competitors &amp; Alternatives for Customer Engagement in 2026</code>가 2026-08-24 modified로 잡혔다. 신규 발행은 아니지만 Braze 대체재 키워드로 SEO와 competitive capture를 강화하는 움직임이다. 외부 세일즈 자료에 인용하기보다는 objection 대비용으로 watch.</li>
+<li><strong>AppsFlyer:</strong> Apify RAG는 HTTP 500. Direct fetch에서 User Engagement &amp; Retention, eCommerce topic page가 2026-08-26 date hit를 보였고 Enterprise-Grade Security product page가 access governance와 audit control을 강조했다. 신규 고신호 article로 확정하지 못해 Top 5 제외.</li>
+<li><strong>Airbridge/AB180:</strong> Apify RAG는 HTTP 500. Direct fetch에서 Google I/O 2026 measurement shifts와 web-to-app subscription campaign 글이 확인됐지만 이번 주 신규 발행 근거는 약했다. Airbridge 페이지에는 LLM-facing 링크와 app/signup 링크 contamination이 많아 ranking confidence 낮음.</li>
+<li><strong>VWO:</strong> Apify RAG는 HTTP 500. Direct fetch에서 Wandz AI 페이지, feature flag ebook, mobile revenue success stories가 확인됐다. 이번 주 신규성은 불명확하지만 <code>agentic optimization system</code> 메시지는 experimentation 시장의 AI 운영화 흐름으로 계속 watch.</li>
+<li><strong>YouTube/Instagram:</strong> 전용 Actor 미실행. Social/video signal은 이번 주 report 범위에서 제외.</li>
+</ul>
+<h2>Sales Backlog Candidates</h2>
+<h3>[BACKLOG-1] Headless analytics readiness checklist</h3>
+<ul>
+<li><strong>Action:</strong> Claude, MCP, internal agent 사용 기업을 대상으로 <code>trusted product context</code>, <code>metric definition</code>, <code>access control</code>, <code>event naming convention</code> 체크리스트 1장 제작.</li>
+<li><strong>Persona target:</strong> data_analytics, product_pm</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-2] Product Intelligence operating loop slide</h3>
+<ul>
+<li><strong>Action:</strong> Mixpanel의 <code>learn faster than you ship</code> 메시지를 기반으로 <code>Question -&gt; Evidence -&gt; Decision -&gt; Experiment -&gt; Rollout -&gt; Learning</code> 슬라이드 제작.</li>
+<li><strong>Persona target:</strong> product_pm, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-3] Analyst capacity relief customer story block</h3>
+<ul>
+<li><strong>Action:</strong> Acid Labs, Howbout 사례를 묶어 “분석가 추가 채용 전 AI self-serve analytics pilot” 제안 문구 작성.</li>
+<li><strong>Persona target:</strong> product_pm, data_analytics, exec_cmo</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-4] AI Agent Analytics governance section</h3>
+<ul>
+<li><strong>Action:</strong> Amplitude 보안 메시지에 대응해 trace/eval/product event 연결 전 privacy redaction, role-based access, retention policy checklist 추가.</li>
+<li><strong>Persona target:</strong> data_analytics, product_pm</li>
+<li><strong>Priority:</strong> High</li>
+</ul>
+<h3>[BACKLOG-5] Conversational CRM measurement one-pager</h3>
+<ul>
+<li><strong>Action:</strong> Braze WhatsApp/conversational/fan loyalty 흐름을 활용해 <code>conversation -&gt; activation -&gt; retention -&gt; LTV</code> 측정 프레임 작성.</li>
+<li><strong>Persona target:</strong> growth_crm, exec_cmo</li>
+<li><strong>Priority:</strong> Medium-High</li>
+</ul>
+<h2>Caveats &amp; 다음 개선 항목</h2>
+<p>1. <strong>Apify RAG 부분 장애:</strong> Mixpanel, Amplitude, Braze, MoEngage는 일부 성공. AppsFlyer, Airbridge/AB180, VWO는 HTTP 500. direct public official fetch로 보강했다.</p>
+<p>2. <strong>Web search/extract 미구성:</strong> Firecrawl 기반 web_search/web_extract는 API 설정 부재로 실패했다.</p>
+<p>3. <strong>Direct 수집 한계:</strong> official domain/sitemap/public page만 사용했고 login-only/private content 우회는 하지 않았다. date hit는 page body, metadata, related content 날짜가 섞일 수 있어 외부 인용 전 신규 발행과 CMS 수정 구분 재확인 필요.</p>
+<p>4. <strong>Social actor 미실행:</strong> YouTube/Instagram 전용 Actor는 schema/비용 불확실성과 official-domain 우선순위 때문에 실행하지 않았다.</p>
+<p>5. <strong>Curator Log/Sheets:</strong> 이번 cron 환경에는 Google Sheet append tool이 노출되지 않아 실제 Sheet append는 수행하지 못했다. High-signal 후보는 본 report와 backlog candidate로 남겼다.</p>
+<h2>Raw / Artifacts</h2>
+<ul>
+<li>Apify RAG raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-rag-2026-08-31.json</code></li>
+<li>Direct public raw: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/raw/partner-intelligence-direct-public-2026-08-31.json</code></li>
+<li>Collector script: <code>/Users/sykim/.openclaw/workspace/oceo/reports/apify-mcp/run_partner_intel_2026_08_31.py</code></li>
+</ul>
+  </div>
+</main>
+</body>
+</html>
