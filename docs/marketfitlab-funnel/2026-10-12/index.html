@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MarketFit Lab Funnel Report 2026-10-12</title>
+  <style>
+    :root{--primary:#1976D2;--alert:#D84315;--light:#E8F4FB;--text:#222222;--secondary:#888888;--border:#E0E0E0;--ok:#2E7D32;--soft:#F7FAFD;}
+    *{box-sizing:border-box} body{margin:0;background:#fff;color:var(--text);font-family:Pretendard,"Noto Sans KR",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}.hero{background:var(--primary);color:#fff;padding:32px 0}.hero h1{margin:0 0 8px;font-size:28px;line-height:1.35}.meta{color:rgba(255,255,255,.86);font-size:13px}.headline{background:var(--light);border-bottom:1px solid var(--border);padding:22px 0}.headline h2{margin:0;color:var(--alert);font-size:24px;line-height:1.38}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}}@media(max-width:540px){.grid{grid-template-columns:1fr}.hero h1{font-size:23px}.headline h2{font-size:20px}}
+    .card{border:1px solid var(--border);border-radius:14px;padding:17px;background:#fff}.card.blue{background:var(--light)}.label{font-size:12px;color:var(--secondary);font-weight:800;letter-spacing:.02em}.value{font-size:30px;font-weight:900;margin:4px 0}.sub{font-size:13px;color:var(--secondary)}h2.section{font-size:20px;margin:34px 0 12px;border-bottom:2px solid var(--border);padding-bottom:8px}.note{background:var(--light);border-left:5px solid var(--primary);border-radius:8px;padding:14px 16px;margin:14px 0}.alert{background:#FBE9E7;border-left:5px solid var(--alert);border-radius:8px;padding:14px 16px;margin:14px 0}.table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid var(--border);padding:10px 12px;text-align:left}th{background:var(--soft)}td.num,th.num{text-align:right;white-space:nowrap}.down{color:var(--alert);font-weight:800}.up{color:var(--ok);font-weight:800}.pill{display:inline-block;border-radius:999px;padding:2px 9px;background:var(--light);color:var(--primary);font-weight:800;font-size:12px}.mask{font-weight:900;color:var(--alert)}footer{margin:42px 0;color:var(--secondary);font-size:13px}.funnel{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}.step{border:1px solid var(--border);border-radius:12px;padding:14px;background:#fff}.step b{display:block;font-size:22px}.step span{font-size:12px;color:var(--secondary)}@media(max-width:860px){.funnel{grid-template-columns:1fr 1fr}}@media(max-width:540px){.funnel{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section class="hero"><div class="wrap">
+    <h1>MarketFit Lab Weekly Funnel + Demo Form Abandonment Report</h1>
+    <div class="meta">분석 기간: 2026-10-05 ~ 2026-10-11 (Asia/Seoul 기준) · 발행일: 2026-10-12 · Source: Mixpanel aggregate event counts</div>
+  </div></section>
+
+  <section class="headline"><div class="wrap">
+    <h2>So What: 방문과 블로그 조회는 줄었지만 데모 CTA 클릭은 증가했습니다. 이번 주 개선 초점은 CTA 이후 폼 경험입니다.</h2>
+  </div></section>
+
+  <main class="wrap">
+    <div class="grid">
+      <div class="card blue"><div class="label">VISITS / PAGE VIEWS</div><div class="value">약 1.8K</div><div class="sub">전주 대비 약 18% 감소입니다.</div></div>
+      <div class="card"><div class="label">BLOG VIEW RATE</div><div class="value">24.3%</div><div class="sub">블로그 조회는 약 430건입니다.</div></div>
+      <div class="card"><div class="label">DEMO CTA CLICKS</div><div class="value">약 190</div><div class="sub">주요 데모 CTA 2종 합산입니다.</div></div>
+      <div class="card"><div class="label">DEMO SUBMITS</div><div class="value">&lt;5</div><div class="sub">공개본 소표본 보호 기준을 적용했습니다.</div></div>
+    </div>
+
+    <h2 class="section">Week-over-week comparison</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Metric</th><th class="num">Prior 2026-10-05</th><th class="num">Current 2026-10-12</th><th class="num">Change</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td>Page views / visits proxy</td><td class="num">약 2.1K</td><td class="num">약 1.8K</td><td class="num down">약 -18%</td><td>유입 규모는 전주보다 감소했습니다.</td></tr>
+        <tr><td>Blog views</td><td class="num">약 620</td><td class="num">약 430</td><td class="num down">약 -31%</td><td>블로그 조회 수와 조회율이 모두 낮아졌습니다.</td></tr>
+        <tr><td>Total demo CTA clicks</td><td class="num">약 180</td><td class="num">약 190</td><td class="num up">약 +10%</td><td>유입 감소에도 CTA 반응은 증가했습니다.</td></tr>
+        <tr><td>Demo form starts</td><td class="num">저표본</td><td class="num">저표본</td><td class="num">확인 필요</td><td>CTA 클릭 증가가 폼 시작으로 충분히 이어졌는지 추가 관찰이 필요합니다.</td></tr>
+        <tr><td>Demo submissions</td><td class="num">소표본 보호</td><td class="num mask">&lt;5</td><td class="num">소표본</td><td>공개본에서는 상세 수치를 표시하지 않습니다.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 class="section">Primary funnel and drop-off rates</h2>
+    <div class="funnel">
+      <div class="step"><span>Page views</span><b>약 1.8K</b><small>100%</small></div>
+      <div class="step"><span>Blog views</span><b>약 430</b><small>24.3% of page views</small></div>
+      <div class="step"><span>Demo CTA clicks</span><b>약 190</b><small>45.5% of blog views</small></div>
+      <div class="step"><span>Form starts</span><b>저표본</b><small>&lt;10% of CTA clicks</small></div>
+      <div class="step"><span>Submits</span><b class="mask">&lt;5</b><small>low sample, rate not disclosed</small></div>
+    </div>
+    <div class="alert"><b>폼 단계 진단:</b> CTA 클릭 이후 폼 시작 구간에서 개선 여지가 확인됩니다. 폼 제출은 공개 소표본 보호 기준에 해당하므로 상세 수치를 표시하지 않습니다.</div>
+
+    <h2 class="section">Daily table</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Date</th><th class="num">Page views</th><th class="num">Blog views</th><th class="num">Demo CTA clicks</th><th class="num">Starts</th><th class="num">Abandons</th><th class="num">Errors</th><th class="num">Submits</th></tr></thead>
+      <tbody>
+        <tr><td>2026-10-05</td><td class="num">100-199</td><td class="num">30-49</td><td class="num">10-19</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-06</td><td class="num">300-399</td><td class="num">75-99</td><td class="num">20-29</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-07</td><td class="num">300-399</td><td class="num">100-124</td><td class="num">30-39</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-08</td><td class="num">300-399</td><td class="num">75-99</td><td class="num">30-39</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-09</td><td class="num">200-299</td><td class="num">30-49</td><td class="num">20-29</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-10</td><td class="num">200-299</td><td class="num">30-49</td><td class="num">30-39</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+        <tr><td>2026-10-11</td><td class="num">100-199</td><td class="num">30-49</td><td class="num">20-29</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td><td class="num">소표본</td></tr>
+      </tbody>
+      <tfoot><tr><th>Total</th><th class="num">약 1.8K</th><th class="num">약 430</th><th class="num">약 190</th><th class="num">저표본</th><th class="num">저표본</th><th class="num mask">&lt;5</th><th class="num mask">&lt;5</th></tr></tfoot>
+    </table></div>
+
+    <h2 class="section">Form abandonment diagnosis</h2>
+    <ul>
+      <li><b>확인된 사실:</b> 페이지뷰는 약 1.8K, 블로그 조회는 약 430건, 주요 데모 CTA 클릭은 약 190건입니다.</li>
+      <li><b>확인된 사실:</b> CTA 클릭에서 폼 시작까지의 전환은 낮은 수준이며 전주보다 약화되었습니다.</li>
+      <li><b>확인된 사실:</b> 오류와 제출은 공개 소표본 보호 기준에 해당합니다.</li>
+      <li><b>가설:</b> CTA 클릭 후 폼 노출까지의 랜딩 경로, 모바일 로딩, 폼 임베드 상태, 이벤트 발화 조건 중 하나가 개선 대상일 가능성이 있습니다.</li>
+      <li><b>한계:</b> 본 공개본은 집계 이벤트만 사용했으며 개인 식별 가능 데이터, 사용자 단위 원문, 프로필 데이터는 조회하지 않았습니다.</li>
+    </ul>
+
+    <h2 class="section">Recommended actions</h2>
+    <div class="note"><span class="pill">P0</span> CTA 클릭 후 폼이 실제로 노출되는지 모바일과 데스크톱에서 QA하고, 각 CTA별 랜딩 위치와 폼 시작 이벤트 발화를 확인하는 것을 권장합니다.</div>
+    <div class="note"><span class="pill">P1</span> 폼 시작 후 이탈 가능성이 있으므로 첫 필드 입력, 필수 입력 수, 제출 버튼 활성화 조건, 오류 메시지 노출을 우선 점검해야 합니다.</div>
+    <div class="note"><span class="pill">P2</span> 블로그 조회율이 24.3%로 낮아졌으므로 상위 유입 페이지의 내부 링크 위치와 데모 CTA 문구를 함께 점검하는 것을 권장합니다.</div>
+
+    <h2 class="section">Validation & Caveats</h2>
+    <ul>
+      <li>본 공개 리포트는 공개 가능한 집계 이벤트 기준으로 작성했습니다. 내부 검증 세부사항은 비공개로 관리합니다.</li>
+      <li>CTA total은 주요 데모 CTA 2종을 합산했습니다. 동일 사용자의 중복 클릭 가능성은 남아 있습니다.</li>
+      <li>폼 제출은 소표본이므로 전환율 개선 또는 악화를 단정하지 않습니다. 2주 이상 누적 추세로 내구성을 확인해야 합니다.</li>
+      <li>전주 비교는 직전 공개 리포트의 집계 수치에서 추출했습니다.</li>
+    </ul>
+
+    <h2 class="section">Previous report</h2>
+    <p>지난 리포트: <a href="../2026-10-05/index.html">2026-10-05 MarketFit Lab Funnel Report</a>.</p>
+    <footer>Prepared as a public-safe aggregated analytics report. No user-level, personal, or customer-identifiable records are included.</footer>
+  </main>
+</body>
+</html>
